@@ -1,0 +1,343 @@
+生成数据列表完成！
+-------------------------------------------------------------------------------
+   Layer (type)         Input Shape          Output Shape         Param #    
+===============================================================================
+     Conv2D-1        [[1, 3, 224, 224]]   [1, 64, 112, 112]        9,408     
+   BatchNorm2D-1    [[1, 64, 112, 112]]   [1, 64, 112, 112]         256      
+      ReLU-1        [[1, 64, 112, 112]]   [1, 64, 112, 112]          0       
+    MaxPool2D-1     [[1, 64, 112, 112]]    [1, 64, 56, 56]           0       
+     Conv2D-3        [[1, 64, 56, 56]]     [1, 64, 56, 56]         4,096     
+   BatchNorm2D-3     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+      ReLU-2         [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-4        [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,864     
+   BatchNorm2D-4     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+     Conv2D-5        [[1, 64, 56, 56]]     [1, 256, 56, 56]       16,384     
+   BatchNorm2D-5     [[1, 256, 56, 56]]    [1, 256, 56, 56]        1,024     
+     Conv2D-2        [[1, 64, 56, 56]]     [1, 256, 56, 56]       16,384     
+   BatchNorm2D-2     [[1, 256, 56, 56]]    [1, 256, 56, 56]        1,024     
+ BottleneckBlock-1   [[1, 64, 56, 56]]     [1, 256, 56, 56]          0       
+     Conv2D-6        [[1, 256, 56, 56]]    [1, 64, 56, 56]        16,384     
+   BatchNorm2D-6     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+      ReLU-3         [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-7        [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,864     
+   BatchNorm2D-7     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+     Conv2D-8        [[1, 64, 56, 56]]     [1, 256, 56, 56]       16,384     
+   BatchNorm2D-8     [[1, 256, 56, 56]]    [1, 256, 56, 56]        1,024     
+ BottleneckBlock-2   [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-9        [[1, 256, 56, 56]]    [1, 64, 56, 56]        16,384     
+   BatchNorm2D-9     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+      ReLU-4         [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-10       [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,864     
+  BatchNorm2D-10     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+     Conv2D-11       [[1, 64, 56, 56]]     [1, 256, 56, 56]       16,384     
+  BatchNorm2D-11     [[1, 256, 56, 56]]    [1, 256, 56, 56]        1,024     
+ BottleneckBlock-3   [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-13       [[1, 256, 56, 56]]    [1, 128, 56, 56]       32,768     
+  BatchNorm2D-13     [[1, 128, 56, 56]]    [1, 128, 56, 56]         512      
+      ReLU-5         [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-14       [[1, 128, 56, 56]]    [1, 128, 28, 28]       147,456    
+  BatchNorm2D-14     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+     Conv2D-15       [[1, 128, 28, 28]]    [1, 512, 28, 28]       65,536     
+  BatchNorm2D-15     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+     Conv2D-12       [[1, 256, 56, 56]]    [1, 512, 28, 28]       131,072    
+  BatchNorm2D-12     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+ BottleneckBlock-4   [[1, 256, 56, 56]]    [1, 512, 28, 28]          0       
+     Conv2D-16       [[1, 512, 28, 28]]    [1, 128, 28, 28]       65,536     
+  BatchNorm2D-16     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+      ReLU-6         [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-17       [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,456    
+  BatchNorm2D-17     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+     Conv2D-18       [[1, 128, 28, 28]]    [1, 512, 28, 28]       65,536     
+  BatchNorm2D-18     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+ BottleneckBlock-5   [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-19       [[1, 512, 28, 28]]    [1, 128, 28, 28]       65,536     
+  BatchNorm2D-19     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+      ReLU-7         [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-20       [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,456    
+  BatchNorm2D-20     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+     Conv2D-21       [[1, 128, 28, 28]]    [1, 512, 28, 28]       65,536     
+  BatchNorm2D-21     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+ BottleneckBlock-6   [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-22       [[1, 512, 28, 28]]    [1, 128, 28, 28]       65,536     
+  BatchNorm2D-22     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+      ReLU-8         [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-23       [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,456    
+  BatchNorm2D-23     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+     Conv2D-24       [[1, 128, 28, 28]]    [1, 512, 28, 28]       65,536     
+  BatchNorm2D-24     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+ BottleneckBlock-7   [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-26       [[1, 512, 28, 28]]    [1, 256, 28, 28]       131,072    
+  BatchNorm2D-26     [[1, 256, 28, 28]]    [1, 256, 28, 28]        1,024     
+      ReLU-9        [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-27       [[1, 256, 28, 28]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-27     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-28       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-28    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+     Conv2D-25       [[1, 512, 28, 28]]   [1, 1024, 14, 14]       524,288    
+  BatchNorm2D-25    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+ BottleneckBlock-8   [[1, 512, 28, 28]]   [1, 1024, 14, 14]          0       
+     Conv2D-29      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-29     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-10       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-30       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-30     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-31       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-31    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+ BottleneckBlock-9  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-32      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-32     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-11       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-33       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-33     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-34       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-34    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-10  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-35      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-35     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-12       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-36       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-36     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-37       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-37    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-11  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-38      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-38     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-13       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-39       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-39     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-40       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-40    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-12  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-41      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-41     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-14       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-42       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-42     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-43       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-43    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-13  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-45      [[1, 1024, 14, 14]]    [1, 512, 14, 14]       524,288    
+  BatchNorm2D-45     [[1, 512, 14, 14]]    [1, 512, 14, 14]        2,048     
+      ReLU-15        [[1, 2048, 7, 7]]     [1, 2048, 7, 7]           0       
+     Conv2D-46       [[1, 512, 14, 14]]     [1, 512, 7, 7]       2,359,296   
+  BatchNorm2D-46      [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+     Conv2D-47        [[1, 512, 7, 7]]     [1, 2048, 7, 7]       1,048,576   
+  BatchNorm2D-47     [[1, 2048, 7, 7]]     [1, 2048, 7, 7]         8,192     
+     Conv2D-44      [[1, 1024, 14, 14]]    [1, 2048, 7, 7]       2,097,152   
+  BatchNorm2D-44     [[1, 2048, 7, 7]]     [1, 2048, 7, 7]         8,192     
+BottleneckBlock-14  [[1, 1024, 14, 14]]    [1, 2048, 7, 7]           0       
+     Conv2D-48       [[1, 2048, 7, 7]]      [1, 512, 7, 7]       1,048,576   
+  BatchNorm2D-48      [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+      ReLU-16        [[1, 2048, 7, 7]]     [1, 2048, 7, 7]           0       
+     Conv2D-49        [[1, 512, 7, 7]]      [1, 512, 7, 7]       2,359,296   
+  BatchNorm2D-49      [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+     Conv2D-50        [[1, 512, 7, 7]]     [1, 2048, 7, 7]       1,048,576   
+  BatchNorm2D-50     [[1, 2048, 7, 7]]     [1, 2048, 7, 7]         8,192     
+BottleneckBlock-15   [[1, 2048, 7, 7]]     [1, 2048, 7, 7]           0       
+     Conv2D-51       [[1, 2048, 7, 7]]      [1, 512, 7, 7]       1,048,576   
+  BatchNorm2D-51      [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+      ReLU-17        [[1, 2048, 7, 7]]     [1, 2048, 7, 7]           0       
+     Conv2D-52        [[1, 512, 7, 7]]      [1, 512, 7, 7]       2,359,296   
+  BatchNorm2D-52      [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+     Conv2D-53        [[1, 512, 7, 7]]     [1, 2048, 7, 7]       1,048,576   
+  BatchNorm2D-53     [[1, 2048, 7, 7]]     [1, 2048, 7, 7]         8,192     
+BottleneckBlock-16   [[1, 2048, 7, 7]]     [1, 2048, 7, 7]           0       
+AdaptiveAvgPool2D-1  [[1, 2048, 7, 7]]     [1, 2048, 1, 1]           0       
+     Linear-1           [[1, 2048]]             [1, 5]            10,245     
+===============================================================================
+Total params: 23,571,397
+Trainable params: 23,465,157
+Non-trainable params: 106,240
+-------------------------------------------------------------------------------
+Input size (MB): 0.57
+Forward/backward pass size (MB): 261.48
+Params size (MB): 89.92
+Estimated Total Size (MB): 351.97
+-------------------------------------------------------------------------------
+
+The loss value printed in the log is the current step, and the metric is the average value of previous steps.
+Epoch 1/30
+step 69/69 - loss: 1.3723 - acc: 0.4144 - 385ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/0
+Eval begin...
+step 10/10 - loss: 1.5296 - acc: 0.4592 - 266ms/step
+Eval samples: 625
+Epoch 2/30
+step 69/69 - loss: 1.7883 - acc: 0.4994 - 385ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/1
+Eval begin...
+step 10/10 - loss: 1.1031 - acc: 0.5216 - 265ms/step
+Eval samples: 625
+Epoch 3/30
+step 69/69 - loss: 1.3377 - acc: 0.5351 - 387ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/2
+Eval begin...
+step 10/10 - loss: 1.2821 - acc: 0.5232 - 265ms/step
+Eval samples: 625
+Epoch 4/30
+step 69/69 - loss: 1.0180 - acc: 0.5451 - 390ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/3
+Eval begin...
+step 10/10 - loss: 1.3115 - acc: 0.5680 - 267ms/step
+Eval samples: 625
+Epoch 5/30
+step 69/69 - loss: 0.9628 - acc: 0.6135 - 392ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/4
+Eval begin...
+step 10/10 - loss: 0.9984 - acc: 0.5680 - 268ms/step
+Eval samples: 625
+Epoch 6/30
+step 69/69 - loss: 0.7653 - acc: 0.6418 - 391ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/5
+Eval begin...
+step 10/10 - loss: 1.1817 - acc: 0.6400 - 268ms/step
+Eval samples: 625
+Epoch 7/30
+step 69/69 - loss: 0.8378 - acc: 0.6791 - 395ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/6
+Eval begin...
+step 10/10 - loss: 0.9215 - acc: 0.6160 - 273ms/step
+Eval samples: 625
+Epoch 8/30
+step 69/69 - loss: 1.0061 - acc: 0.6921 - 391ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/7
+Eval begin...
+step 10/10 - loss: 2.5306 - acc: 0.6128 - 265ms/step
+Eval samples: 625
+Epoch 9/30
+step 69/69 - loss: 1.0235 - acc: 0.7202 - 392ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/8
+Eval begin...
+step 10/10 - loss: 1.1529 - acc: 0.6256 - 267ms/step
+Eval samples: 625
+Epoch 10/30
+step 69/69 - loss: 0.4121 - acc: 0.7422 - 393ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/9
+Eval begin...
+step 10/10 - loss: 0.8580 - acc: 0.6864 - 268ms/step
+Eval samples: 625
+Epoch 11/30
+step 69/69 - loss: 0.9229 - acc: 0.7778 - 391ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/10
+Eval begin...
+step 10/10 - loss: 1.0108 - acc: 0.5952 - 266ms/step
+Eval samples: 625
+Epoch 12/30
+step 69/69 - loss: 0.5255 - acc: 0.7883 - 394ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/11
+Eval begin...
+step 10/10 - loss: 0.8964 - acc: 0.6400 - 268ms/step
+Eval samples: 625
+Epoch 13/30
+step 69/69 - loss: 0.5990 - acc: 0.7947 - 392ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/12
+Eval begin...
+step 10/10 - loss: 0.7802 - acc: 0.6784 - 267ms/step
+Eval samples: 625
+Epoch 14/30
+step 69/69 - loss: 0.7317 - acc: 0.8018 - 391ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/13
+Eval begin...
+step 10/10 - loss: 1.4632 - acc: 0.5680 - 266ms/step
+Eval samples: 625
+Epoch 15/30
+step 69/69 - loss: 0.2413 - acc: 0.8439 - 392ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/14
+Eval begin...
+step 10/10 - loss: 1.0607 - acc: 0.7280 - 266ms/step
+Eval samples: 625
+Epoch 16/30
+step 69/69 - loss: 0.4543 - acc: 0.8809 - 392ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/15
+Eval begin...
+step 10/10 - loss: 1.1443 - acc: 0.6624 - 267ms/step
+Eval samples: 625
+Epoch 17/30
+step 69/69 - loss: 0.3146 - acc: 0.8617 - 393ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/16
+Eval begin...
+step 10/10 - loss: 1.2334 - acc: 0.6784 - 268ms/step
+Eval samples: 625
+Epoch 18/30
+step 69/69 - loss: 0.2943 - acc: 0.9001 - 392ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/17
+Eval begin...
+step 10/10 - loss: 1.5300 - acc: 0.6496 - 268ms/step
+Eval samples: 625
+Epoch 19/30
+step 69/69 - loss: 0.4821 - acc: 0.9093 - 392ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/18
+Eval begin...
+step 10/10 - loss: 1.2795 - acc: 0.6768 - 275ms/step
+Eval samples: 625
+Epoch 20/30
+step 69/69 - loss: 0.0933 - acc: 0.9131 - 393ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/19
+Eval begin...
+step 10/10 - loss: 1.8213 - acc: 0.6496 - 267ms/step
+Eval samples: 625
+Epoch 21/30
+step 69/69 - loss: 0.0972 - acc: 0.9147 - 393ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/20
+Eval begin...
+step 10/10 - loss: 1.6229 - acc: 0.5568 - 267ms/step
+Eval samples: 625
+Epoch 22/30
+step 69/69 - loss: 0.4442 - acc: 0.9355 - 391ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/21
+Eval begin...
+step 10/10 - loss: 1.3669 - acc: 0.7120 - 268ms/step
+Eval samples: 625
+Epoch 23/30
+step 69/69 - loss: 0.1101 - acc: 0.9623 - 391ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/22
+Eval begin...
+step 10/10 - loss: 1.4495 - acc: 0.6672 - 268ms/step
+Eval samples: 625
+Epoch 24/30
+step 69/69 - loss: 0.1593 - acc: 0.9545 - 392ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/23
+Eval begin...
+step 10/10 - loss: 1.8371 - acc: 0.6592 - 268ms/step
+Eval samples: 625
+Epoch 25/30
+step 69/69 - loss: 0.0837 - acc: 0.9525 - 391ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/24
+Eval begin...
+step 10/10 - loss: 2.0707 - acc: 0.6640 - 267ms/step
+Eval samples: 625
+Epoch 26/30
+step 69/69 - loss: 0.0237 - acc: 0.9712 - 391ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/25
+Eval begin...
+step 10/10 - loss: 1.9279 - acc: 0.7024 - 267ms/step
+Eval samples: 625
+Epoch 27/30
+step 69/69 - loss: 0.0825 - acc: 0.9719 - 392ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/26
+Eval begin...
+step 10/10 - loss: 2.0553 - acc: 0.6480 - 269ms/step
+Eval samples: 625
+Epoch 28/30
+step 69/69 - loss: 0.1315 - acc: 0.9662 - 390ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/27
+Eval begin...
+step 10/10 - loss: 2.5115 - acc: 0.5888 - 267ms/step
+Eval samples: 625
+Epoch 29/30
+step 69/69 - loss: 0.1523 - acc: 0.9611 - 392ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/28
+Eval begin...
+step 10/10 - loss: 1.3290 - acc: 0.6896 - 266ms/step
+Eval samples: 625
+Epoch 30/30
+step 69/69 - loss: 0.3250 - acc: 0.9554 - 393ms/step
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/29
+Eval begin...
+step 10/10 - loss: 2.1636 - acc: 0.6528 - 267ms/step
+Eval samples: 625
+save checkpoint at /home/wangxch/luorq/Foods/model/net3resnet/final
+Eval begin...
+step 10/10 [==============================] - loss: 2.1636 - acc: 0.6528 - 268ms/step
+Eval samples: 625
+{'loss': [2.1636353], 'acc': 0.6528}

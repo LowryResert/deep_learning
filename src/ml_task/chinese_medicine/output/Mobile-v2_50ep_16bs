@@ -1,0 +1,317 @@
+W1029 13:57:55.828508 30412 device_context.cc:404] Please NOTE: device: 0, GPU Compute Capability: 6.1, Driver API Version: 11.2, Runtime API Version: 10.1
+W1029 13:57:55.831002 30412 device_context.cc:422] device: 0, cuDNN Version: 7.6.
+生成数据列表完成！
+<class 'paddle.nn.layer.conv.Conv2D'>'s flops has been counted
+<class 'paddle.nn.layer.norm.BatchNorm2D'>'s flops has been counted
+<class 'paddle.nn.layer.activation.ReLU'>'s flops has been counted
+<class 'paddle.nn.layer.pooling.AdaptiveAvgPool2D'>'s flops has been counted
+<class 'paddle.nn.layer.common.Linear'>'s flops has been counted
++-----------------------+-------------------+-------------------+---------+----------+
+|       Layer Name      |    Input Shape    |    Output Shape   |  Params |  Flops   |
++-----------------------+-------------------+-------------------+---------+----------+
+|        conv2d_0       |  [1, 3, 224, 224] | [1, 32, 112, 112] |   864   | 10838016 |
+|     batch_norm2d_0    | [1, 32, 112, 112] | [1, 32, 112, 112] |   128   |  802816  |
+|        re_lu_0        | [1, 32, 112, 112] | [1, 32, 112, 112] |    0    |    0     |
+|        conv2d_1       | [1, 32, 112, 112] | [1, 32, 112, 112] |   288   | 3612672  |
+|     batch_norm2d_1    | [1, 32, 112, 112] | [1, 32, 112, 112] |   128   |  802816  |
+|        re_lu_1        | [1, 32, 112, 112] | [1, 32, 112, 112] |    0    |    0     |
+|        conv2d_2       | [1, 32, 112, 112] | [1, 64, 112, 112] |   2048  | 25690112 |
+|     batch_norm2d_2    | [1, 64, 112, 112] | [1, 64, 112, 112] |   256   | 1605632  |
+|        re_lu_2        | [1, 64, 112, 112] | [1, 64, 112, 112] |    0    |    0     |
+|        conv2d_3       | [1, 64, 112, 112] |  [1, 64, 56, 56]  |   576   | 1806336  |
+|     batch_norm2d_3    |  [1, 64, 56, 56]  |  [1, 64, 56, 56]  |   256   |  401408  |
+|        re_lu_3        |  [1, 64, 56, 56]  |  [1, 64, 56, 56]  |    0    |    0     |
+|        conv2d_4       |  [1, 64, 56, 56]  |  [1, 128, 56, 56] |   8192  | 25690112 |
+|     batch_norm2d_4    |  [1, 128, 56, 56] |  [1, 128, 56, 56] |   512   |  802816  |
+|        re_lu_4        |  [1, 128, 56, 56] |  [1, 128, 56, 56] |    0    |    0     |
+|        conv2d_5       |  [1, 128, 56, 56] |  [1, 128, 56, 56] |   1152  | 3612672  |
+|     batch_norm2d_5    |  [1, 128, 56, 56] |  [1, 128, 56, 56] |   512   |  802816  |
+|        re_lu_5        |  [1, 128, 56, 56] |  [1, 128, 56, 56] |    0    |    0     |
+|        conv2d_6       |  [1, 128, 56, 56] |  [1, 128, 56, 56] |  16384  | 51380224 |
+|     batch_norm2d_6    |  [1, 128, 56, 56] |  [1, 128, 56, 56] |   512   |  802816  |
+|        re_lu_6        |  [1, 128, 56, 56] |  [1, 128, 56, 56] |    0    |    0     |
+|        conv2d_7       |  [1, 128, 56, 56] |  [1, 128, 28, 28] |   1152  |  903168  |
+|     batch_norm2d_7    |  [1, 128, 28, 28] |  [1, 128, 28, 28] |   512   |  200704  |
+|        re_lu_7        |  [1, 128, 28, 28] |  [1, 128, 28, 28] |    0    |    0     |
+|        conv2d_8       |  [1, 128, 28, 28] |  [1, 256, 28, 28] |  32768  | 25690112 |
+|     batch_norm2d_8    |  [1, 256, 28, 28] |  [1, 256, 28, 28] |   1024  |  401408  |
+|        re_lu_8        |  [1, 256, 28, 28] |  [1, 256, 28, 28] |    0    |    0     |
+|        conv2d_9       |  [1, 256, 28, 28] |  [1, 256, 28, 28] |   2304  | 1806336  |
+|     batch_norm2d_9    |  [1, 256, 28, 28] |  [1, 256, 28, 28] |   1024  |  401408  |
+|        re_lu_9        |  [1, 256, 28, 28] |  [1, 256, 28, 28] |    0    |    0     |
+|       conv2d_10       |  [1, 256, 28, 28] |  [1, 256, 28, 28] |  65536  | 51380224 |
+|    batch_norm2d_10    |  [1, 256, 28, 28] |  [1, 256, 28, 28] |   1024  |  401408  |
+|        re_lu_10       |  [1, 256, 28, 28] |  [1, 256, 28, 28] |    0    |    0     |
+|       conv2d_11       |  [1, 256, 28, 28] |  [1, 256, 14, 14] |   2304  |  451584  |
+|    batch_norm2d_11    |  [1, 256, 14, 14] |  [1, 256, 14, 14] |   1024  |  100352  |
+|        re_lu_11       |  [1, 256, 14, 14] |  [1, 256, 14, 14] |    0    |    0     |
+|       conv2d_12       |  [1, 256, 14, 14] |  [1, 512, 14, 14] |  131072 | 25690112 |
+|    batch_norm2d_12    |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   2048  |  200704  |
+|        re_lu_12       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |    0    |    0     |
+|       conv2d_13       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   4608  |  903168  |
+|    batch_norm2d_13    |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   2048  |  200704  |
+|        re_lu_13       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |    0    |    0     |
+|       conv2d_14       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |  262144 | 51380224 |
+|    batch_norm2d_14    |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   2048  |  200704  |
+|        re_lu_14       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |    0    |    0     |
+|       conv2d_15       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   4608  |  903168  |
+|    batch_norm2d_15    |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   2048  |  200704  |
+|        re_lu_15       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |    0    |    0     |
+|       conv2d_16       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |  262144 | 51380224 |
+|    batch_norm2d_16    |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   2048  |  200704  |
+|        re_lu_16       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |    0    |    0     |
+|       conv2d_17       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   4608  |  903168  |
+|    batch_norm2d_17    |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   2048  |  200704  |
+|        re_lu_17       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |    0    |    0     |
+|       conv2d_18       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |  262144 | 51380224 |
+|    batch_norm2d_18    |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   2048  |  200704  |
+|        re_lu_18       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |    0    |    0     |
+|       conv2d_19       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   4608  |  903168  |
+|    batch_norm2d_19    |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   2048  |  200704  |
+|        re_lu_19       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |    0    |    0     |
+|       conv2d_20       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |  262144 | 51380224 |
+|    batch_norm2d_20    |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   2048  |  200704  |
+|        re_lu_20       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |    0    |    0     |
+|       conv2d_21       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   4608  |  903168  |
+|    batch_norm2d_21    |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   2048  |  200704  |
+|        re_lu_21       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |    0    |    0     |
+|       conv2d_22       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |  262144 | 51380224 |
+|    batch_norm2d_22    |  [1, 512, 14, 14] |  [1, 512, 14, 14] |   2048  |  200704  |
+|        re_lu_22       |  [1, 512, 14, 14] |  [1, 512, 14, 14] |    0    |    0     |
+|       conv2d_23       |  [1, 512, 14, 14] |   [1, 512, 7, 7]  |   4608  |  225792  |
+|    batch_norm2d_23    |   [1, 512, 7, 7]  |   [1, 512, 7, 7]  |   2048  |  50176   |
+|        re_lu_23       |   [1, 512, 7, 7]  |   [1, 512, 7, 7]  |    0    |    0     |
+|       conv2d_24       |   [1, 512, 7, 7]  |  [1, 1024, 7, 7]  |  524288 | 25690112 |
+|    batch_norm2d_24    |  [1, 1024, 7, 7]  |  [1, 1024, 7, 7]  |   4096  |  100352  |
+|        re_lu_24       |  [1, 1024, 7, 7]  |  [1, 1024, 7, 7]  |    0    |    0     |
+|       conv2d_25       |  [1, 1024, 7, 7]  |  [1, 1024, 7, 7]  |   9216  |  451584  |
+|    batch_norm2d_25    |  [1, 1024, 7, 7]  |  [1, 1024, 7, 7]  |   4096  |  100352  |
+|        re_lu_25       |  [1, 1024, 7, 7]  |  [1, 1024, 7, 7]  |    0    |    0     |
+|       conv2d_26       |  [1, 1024, 7, 7]  |  [1, 1024, 7, 7]  | 1048576 | 51380224 |
+|    batch_norm2d_26    |  [1, 1024, 7, 7]  |  [1, 1024, 7, 7]  |   4096  |  100352  |
+|        re_lu_26       |  [1, 1024, 7, 7]  |  [1, 1024, 7, 7]  |    0    |    0     |
+| adaptive_avg_pool2d_0 |  [1, 1024, 7, 7]  |  [1, 1024, 1, 1]  |    0    |  51200   |
+|        linear_0       |     [1, 1024]     |       [1, 5]      |   5125  |   5120   |
++-----------------------+-------------------+-------------------+---------+----------+
+Total Flops: 577858048     Total Params: 3233989
+577858048
+2021-10-29 13:57:57
+[training] epoch: 1, step: 1, loss: 1.6219501495361328, acc: 0.3125
+[training] epoch: 1, step: 21, loss: 1.4809772968292236, acc: 0.4375
+[training] epoch: 1, step: 41, loss: 1.4043318033218384, acc: 0.3125
+[validation] epoch: 1, loss: 2.2056747807396784, acc: 0.18055555555555555
+[training] epoch: 2, step: 1, loss: 1.5417790412902832, acc: 0.3125
+[training] epoch: 2, step: 21, loss: 1.2885115146636963, acc: 0.3125
+[training] epoch: 2, step: 41, loss: 1.332732081413269, acc: 0.375
+[validation] epoch: 2, loss: 1.4229559236102634, acc: 0.4189814825852712
+[training] epoch: 3, step: 1, loss: 1.3262104988098145, acc: 0.4375
+[training] epoch: 3, step: 21, loss: 1.2727367877960205, acc: 0.375
+[training] epoch: 3, step: 41, loss: 1.0040875673294067, acc: 0.5625
+[validation] epoch: 3, loss: 1.3618151942888896, acc: 0.43981481591860455
+[training] epoch: 4, step: 1, loss: 0.9926888346672058, acc: 0.625
+[training] epoch: 4, step: 21, loss: 0.9685763120651245, acc: 0.6875
+[training] epoch: 4, step: 41, loss: 1.1901953220367432, acc: 0.4375
+[validation] epoch: 4, loss: 1.2550356255637274, acc: 0.48842592702971566
+[training] epoch: 5, step: 1, loss: 0.9927579164505005, acc: 0.75
+[training] epoch: 5, step: 21, loss: 1.259678602218628, acc: 0.4375
+[training] epoch: 5, step: 41, loss: 1.1829493045806885, acc: 0.5
+[validation] epoch: 5, loss: 1.0710545712047153, acc: 0.5162037048074934
+[training] epoch: 6, step: 1, loss: 0.6749048233032227, acc: 0.6875
+[training] epoch: 6, step: 21, loss: 0.7475869655609131, acc: 0.6875
+[training] epoch: 6, step: 41, loss: 0.8267881870269775, acc: 0.625
+[validation] epoch: 6, loss: 1.1216852731174893, acc: 0.509259260363049
+[training] epoch: 7, step: 1, loss: 1.0304088592529297, acc: 0.5
+[training] epoch: 7, step: 21, loss: 0.9811196327209473, acc: 0.5
+[training] epoch: 7, step: 41, loss: 0.6888470649719238, acc: 0.625
+[validation] epoch: 7, loss: 1.0285726918114557, acc: 0.5648148159186045
+[training] epoch: 8, step: 1, loss: 0.9100233316421509, acc: 0.625
+[training] epoch: 8, step: 21, loss: 0.7265630960464478, acc: 0.75
+[training] epoch: 8, step: 41, loss: 0.6613782644271851, acc: 0.6875
+[validation] epoch: 8, loss: 1.1370888418621488, acc: 0.5925925936963823
+[training] epoch: 9, step: 1, loss: 1.0385950803756714, acc: 0.5625
+[training] epoch: 9, step: 21, loss: 0.5094805359840393, acc: 0.875
+[training] epoch: 9, step: 41, loss: 0.481852263212204, acc: 0.875
+[validation] epoch: 9, loss: 0.9923198752933078, acc: 0.5439814825852712
+[training] epoch: 10, step: 1, loss: 0.8251211643218994, acc: 0.5
+[training] epoch: 10, step: 21, loss: 0.7696596384048462, acc: 0.5
+[training] epoch: 10, step: 41, loss: 1.0621004104614258, acc: 0.5625
+[validation] epoch: 10, loss: 1.09543858634101, acc: 0.5648148159186045
+[training] epoch: 11, step: 1, loss: 0.42924046516418457, acc: 0.875
+[training] epoch: 11, step: 21, loss: 0.667103111743927, acc: 0.625
+[training] epoch: 11, step: 41, loss: 0.47308775782585144, acc: 0.75
+[validation] epoch: 11, loss: 1.0113417307535808, acc: 0.5787037048074934
+[training] epoch: 12, step: 1, loss: 0.3063284754753113, acc: 0.9375
+[training] epoch: 12, step: 21, loss: 0.5012913942337036, acc: 0.875
+[training] epoch: 12, step: 41, loss: 0.6240666508674622, acc: 0.75
+[validation] epoch: 12, loss: 1.2410723235872057, acc: 0.571759260363049
+[training] epoch: 13, step: 1, loss: 1.0310709476470947, acc: 0.5625
+[training] epoch: 13, step: 21, loss: 0.5792058706283569, acc: 0.8125
+[training] epoch: 13, step: 41, loss: 0.6440889835357666, acc: 0.6875
+[validation] epoch: 13, loss: 0.9204952120780945, acc: 0.6805555555555556
+[training] epoch: 14, step: 1, loss: 0.7332553267478943, acc: 0.75
+[training] epoch: 14, step: 21, loss: 0.45131486654281616, acc: 0.875
+[training] epoch: 14, step: 41, loss: 0.470646470785141, acc: 0.75
+[validation] epoch: 14, loss: 0.9307591815789541, acc: 0.6944444444444444
+[training] epoch: 15, step: 1, loss: 0.5604128837585449, acc: 0.75
+[training] epoch: 15, step: 21, loss: 0.7521854639053345, acc: 0.75
+[training] epoch: 15, step: 41, loss: 0.5453882217407227, acc: 0.75
+[validation] epoch: 15, loss: 0.9368957281112671, acc: 0.6226851873927646
+[training] epoch: 16, step: 1, loss: 0.28905296325683594, acc: 1.0
+[training] epoch: 16, step: 21, loss: 0.3294014036655426, acc: 0.875
+[training] epoch: 16, step: 41, loss: 0.8130066394805908, acc: 0.8125
+[validation] epoch: 16, loss: 1.0290233161714342, acc: 0.6226851873927646
+[training] epoch: 17, step: 1, loss: 0.22150638699531555, acc: 0.875
+[training] epoch: 17, step: 21, loss: 0.3287566304206848, acc: 0.75
+[training] epoch: 17, step: 41, loss: 0.18544138967990875, acc: 1.0
+[validation] epoch: 17, loss: 0.8917252586947547, acc: 0.6712962985038757
+[training] epoch: 18, step: 1, loss: 0.13126564025878906, acc: 1.0
+[training] epoch: 18, step: 21, loss: 0.25713515281677246, acc: 0.9375
+[training] epoch: 18, step: 41, loss: 0.213999941945076, acc: 0.9375
+[validation] epoch: 18, loss: 1.089500731892056, acc: 0.571759260363049
+[training] epoch: 19, step: 1, loss: 0.4673998951911926, acc: 0.75
+[training] epoch: 19, step: 21, loss: 0.2809351980686188, acc: 0.875
+[training] epoch: 19, step: 41, loss: 0.07152111083269119, acc: 0.9375
+[validation] epoch: 19, loss: 1.0216941568586562, acc: 0.6712962985038757
+[training] epoch: 20, step: 1, loss: 0.17307183146476746, acc: 1.0
+[training] epoch: 20, step: 21, loss: 0.2913423776626587, acc: 0.875
+[training] epoch: 20, step: 41, loss: 0.2633172273635864, acc: 0.9375
+[validation] epoch: 20, loss: 1.0302523308330112, acc: 0.6643518540594313
+[training] epoch: 21, step: 1, loss: 0.1657087206840515, acc: 0.9375
+[training] epoch: 21, step: 21, loss: 0.2113741785287857, acc: 1.0
+[training] epoch: 21, step: 41, loss: 0.4658975303173065, acc: 0.8125
+[validation] epoch: 21, loss: 1.1876854929659102, acc: 0.6574074096149869
+[training] epoch: 22, step: 1, loss: 0.3887489438056946, acc: 0.8125
+[training] epoch: 22, step: 21, loss: 0.6826515197753906, acc: 0.75
+[training] epoch: 22, step: 41, loss: 0.34007295966148376, acc: 0.875
+[validation] epoch: 22, loss: 1.3297525114483304, acc: 0.6597222222222222
+[training] epoch: 23, step: 1, loss: 0.13715459406375885, acc: 0.9375
+[training] epoch: 23, step: 21, loss: 0.6634092330932617, acc: 0.75
+[training] epoch: 23, step: 41, loss: 0.3074839115142822, acc: 0.875
+[validation] epoch: 23, loss: 1.788104236125946, acc: 0.6134259270297157
+[training] epoch: 24, step: 1, loss: 0.6089346408843994, acc: 0.75
+[training] epoch: 24, step: 21, loss: 0.13356050848960876, acc: 0.9375
+[training] epoch: 24, step: 41, loss: 0.17835411429405212, acc: 0.9375
+[validation] epoch: 24, loss: 1.0328760743141174, acc: 0.6365740762816535
+[training] epoch: 25, step: 1, loss: 0.17582553625106812, acc: 0.9375
+[training] epoch: 25, step: 21, loss: 0.41612714529037476, acc: 0.8125
+[training] epoch: 25, step: 41, loss: 0.19651365280151367, acc: 0.875
+[validation] epoch: 25, loss: 1.0448801815509796, acc: 0.6643518540594313
+[training] epoch: 26, step: 1, loss: 0.26123732328414917, acc: 0.875
+[training] epoch: 26, step: 21, loss: 0.4886617958545685, acc: 0.8125
+[training] epoch: 26, step: 41, loss: 0.02053922787308693, acc: 1.0
+[validation] epoch: 26, loss: 1.0951963795555963, acc: 0.6782407429483202
+[training] epoch: 27, step: 1, loss: 0.3824412226676941, acc: 0.875
+[training] epoch: 27, step: 21, loss: 0.07713282853364944, acc: 1.0
+[training] epoch: 27, step: 41, loss: 0.08917465806007385, acc: 1.0
+[validation] epoch: 27, loss: 1.227228321135044, acc: 0.7013888888888888
+[training] epoch: 28, step: 1, loss: 0.036262642592191696, acc: 1.0
+[training] epoch: 28, step: 21, loss: 0.28422993421554565, acc: 0.875
+[training] epoch: 28, step: 41, loss: 0.45951297879219055, acc: 0.75
+[validation] epoch: 28, loss: 1.7200335992707148, acc: 0.6296296318372091
+[training] epoch: 29, step: 1, loss: 0.38004013895988464, acc: 0.9375
+[training] epoch: 29, step: 21, loss: 0.05057366564869881, acc: 1.0
+[training] epoch: 29, step: 41, loss: 0.13630527257919312, acc: 1.0
+[validation] epoch: 29, loss: 1.3363636881113052, acc: 0.6458333333333334
+[training] epoch: 30, step: 1, loss: 0.1434677541255951, acc: 0.9375
+[training] epoch: 30, step: 21, loss: 0.26868370175361633, acc: 0.8125
+[training] epoch: 30, step: 41, loss: 0.1959526687860489, acc: 1.0
+[validation] epoch: 30, loss: 1.106494492954678, acc: 0.6643518540594313
+[training] epoch: 31, step: 1, loss: 0.12163934856653214, acc: 1.0/home/wangxch/anaconda3/envs/luorq/lib/python3.7/site-packages/paddle/tensor/creation.py:125: DeprecationWarning: `np.object` is a deprecated alias for the builtin `object`. To silence this warning, use `object` by itself. Doing this will not modify any behavior and is safe. 
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if data.dtype == np.object:
+/home/wangxch/anaconda3/envs/luorq/lib/python3.7/site-packages/paddle/nn/layer/norm.py:641: UserWarning: When training, we now always track global mean and variance.
+  "When training, we now always track global mean and variance.")
+
+[training] epoch: 31, step: 21, loss: 0.49421465396881104, acc: 0.9375
+[training] epoch: 31, step: 41, loss: 0.2426440715789795, acc: 0.875
+[validation] epoch: 31, loss: 1.4490602215131123, acc: 0.6921296318372091
+[training] epoch: 32, step: 1, loss: 0.2802048921585083, acc: 0.875
+[training] epoch: 32, step: 21, loss: 0.1387421041727066, acc: 0.9375
+[training] epoch: 32, step: 41, loss: 0.16682296991348267, acc: 0.9375
+[validation] epoch: 32, loss: 1.3687523868348863, acc: 0.6782407429483202
+[training] epoch: 33, step: 1, loss: 0.6637529730796814, acc: 0.75
+[training] epoch: 33, step: 21, loss: 0.26610684394836426, acc: 0.9375
+[training] epoch: 33, step: 41, loss: 0.10663764178752899, acc: 1.0
+[validation] epoch: 33, loss: 1.2786562939484913, acc: 0.6921296318372091
+[training] epoch: 34, step: 1, loss: 0.1294386386871338, acc: 1.0
+[training] epoch: 34, step: 21, loss: 0.027512719854712486, acc: 1.0
+[training] epoch: 34, step: 41, loss: 0.8150542378425598, acc: 0.625
+[validation] epoch: 34, loss: 1.1338113449099991, acc: 0.6944444444444444
+[training] epoch: 35, step: 1, loss: 0.07430842518806458, acc: 0.9375
+[training] epoch: 35, step: 21, loss: 0.047190144658088684, acc: 1.0
+[training] epoch: 35, step: 41, loss: 0.34901362657546997, acc: 0.875
+[validation] epoch: 35, loss: 1.202798883120219, acc: 0.7060185207260979
+[training] epoch: 36, step: 1, loss: 0.047769203782081604, acc: 1.0
+[training] epoch: 36, step: 21, loss: 0.26389244198799133, acc: 0.9375
+[training] epoch: 36, step: 41, loss: 0.07166542112827301, acc: 1.0
+[validation] epoch: 36, loss: 1.1178089469257328, acc: 0.6875
+[training] epoch: 37, step: 1, loss: 0.1102534681558609, acc: 0.9375
+[training] epoch: 37, step: 21, loss: 0.6923762559890747, acc: 0.625
+[training] epoch: 37, step: 41, loss: 0.14778251945972443, acc: 1.0
+[validation] epoch: 37, loss: 1.0062011428591278, acc: 0.7361111111111112
+[training] epoch: 38, step: 1, loss: 0.044441867619752884, acc: 1.0
+[training] epoch: 38, step: 21, loss: 0.15334025025367737, acc: 0.9375
+[training] epoch: 38, step: 41, loss: 0.04885196313261986, acc: 1.0
+[validation] epoch: 38, loss: 1.3180903295675914, acc: 0.7199074096149869
+[training] epoch: 39, step: 1, loss: 0.259868323802948, acc: 0.875
+[training] epoch: 39, step: 21, loss: 0.16612020134925842, acc: 0.9375
+[training] epoch: 39, step: 41, loss: 0.055697161704301834, acc: 1.0
+[validation] epoch: 39, loss: 1.307591509901815, acc: 0.6944444444444444
+[training] epoch: 40, step: 1, loss: 0.43175819516181946, acc: 0.8125
+[training] epoch: 40, step: 21, loss: 0.2692567706108093, acc: 0.9375
+[training] epoch: 40, step: 41, loss: 0.14879989624023438, acc: 0.9375
+[validation] epoch: 40, loss: 1.146671702257461, acc: 0.7222222222222222
+[training] epoch: 41, step: 1, loss: 0.031129665672779083, acc: 1.0
+[training] epoch: 41, step: 21, loss: 0.14167097210884094, acc: 0.875
+[training] epoch: 41, step: 41, loss: 0.019957371056079865, acc: 1.0
+[validation] epoch: 41, loss: 1.2687618707617123, acc: 0.7222222222222222
+[training] epoch: 42, step: 1, loss: 0.07127242535352707, acc: 1.0
+[training] epoch: 42, step: 21, loss: 0.026771381497383118, acc: 1.0
+[training] epoch: 42, step: 41, loss: 0.03877899423241615, acc: 1.0
+[validation] epoch: 42, loss: 1.3376370072364807, acc: 0.7060185207260979
+[training] epoch: 43, step: 1, loss: 0.07348771393299103, acc: 1.0
+[training] epoch: 43, step: 21, loss: 0.09036683291196823, acc: 0.9375
+[training] epoch: 43, step: 41, loss: 0.09110948443412781, acc: 0.9375
+[validation] epoch: 43, loss: 1.4431824220551386, acc: 0.7060185207260979
+[training] epoch: 44, step: 1, loss: 0.04518298804759979, acc: 1.0
+[training] epoch: 44, step: 21, loss: 0.02709668129682541, acc: 1.0
+[training] epoch: 44, step: 41, loss: 0.008483773097395897, acc: 1.0
+[validation] epoch: 44, loss: 1.2337116532855563, acc: 0.7060185207260979
+[training] epoch: 45, step: 1, loss: 0.022171365097165108, acc: 1.0
+[training] epoch: 45, step: 21, loss: 0.23529651761054993, acc: 0.875
+[training] epoch: 45, step: 41, loss: 0.0995325818657875, acc: 0.9375
+[validation] epoch: 45, loss: 1.3692925175031025, acc: 0.7013888888888888
+[training] epoch: 46, step: 1, loss: 0.038307905197143555, acc: 1.0
+[training] epoch: 46, step: 21, loss: 0.3032682240009308, acc: 0.9375
+[training] epoch: 46, step: 41, loss: 0.049357376992702484, acc: 1.0
+[validation] epoch: 46, loss: 1.574245408591297, acc: 0.7152777777777778
+[training] epoch: 47, step: 1, loss: 0.05444531887769699, acc: 1.0
+[training] epoch: 47, step: 21, loss: 0.23987583816051483, acc: 0.875
+[training] epoch: 47, step: 41, loss: 0.11603890359401703, acc: 0.9375
+[validation] epoch: 47, loss: 1.6626290877660115, acc: 0.7060185207260979
+[training] epoch: 48, step: 1, loss: 0.3239278793334961, acc: 0.9375
+[training] epoch: 48, step: 21, loss: 0.005396624561399221, acc: 1.0
+[training] epoch: 48, step: 41, loss: 0.06759271025657654, acc: 0.9375
+[validation] epoch: 48, loss: 1.451547039879693, acc: 0.6712962985038757
+[training] epoch: 49, step: 1, loss: 0.023250944912433624, acc: 1.0
+[training] epoch: 49, step: 21, loss: 0.01601097732782364, acc: 1.0
+[training] epoch: 49, step: 41, loss: 0.022365741431713104, acc: 1.0
+[validation] epoch: 49, loss: 1.4278065976169374, acc: 0.75
+[training] epoch: 50, step: 1, loss: 0.02099444344639778, acc: 1.0
+[training] epoch: 50, step: 21, loss: 0.01415388472378254, acc: 1.0
+[training] epoch: 50, step: 41, loss: 0.06984981149435043, acc: 1.0
+[validation] epoch: 50, loss: 1.1576666434605916, acc: 0.6712962985038757
+2021-10-29 14:01:52
+[validation set] evaluate start...
+[validation set] loss: 1.1576666434605916, acc: 0.6712962985038757
+['dangshen01.jpg', 'jinyinhua02.jpg', 'huaihua01.jpg', 'gouqi02.jpg', 'jinyinhua01.jpg', 'dangshen02.jpg', 'huaihua02.jpg', 'gouqi01.jpg', 'baihe02.jpg', 'baihe01.jpg']
+样本: dangshen01.jpg,被预测为:dangshen
+样本: jinyinhua02.jpg,被预测为:jinyinhua
+样本: huaihua01.jpg,被预测为:jinyinhua
+样本: gouqi02.jpg,被预测为:gouqi
+样本: jinyinhua01.jpg,被预测为:huaihua
+样本: dangshen02.jpg,被预测为:dangshen
+样本: huaihua02.jpg,被预测为:huaihua
+样本: gouqi01.jpg,被预测为:gouqi
+样本: baihe02.jpg,被预测为:baihe
+样本: baihe01.jpg,被预测为:baihe

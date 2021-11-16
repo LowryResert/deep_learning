@@ -1,0 +1,5 @@
+save checkpoint at /home/wangxch/luorq/movie_sentiment/work/v3/final
+Eval begin...
+step 390/390 [==============================] - loss: 1.1449 - acc: 0.8313 - 30ms/step
+Eval samples: 24960
+{'loss': [1.1449163], 'acc': 0.8312900641025641}

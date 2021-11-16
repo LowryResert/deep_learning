@@ -1,0 +1,5 @@
+v1-v1 30eps lr=0.001
+v3-v1 30eps lr=0.0001
+v1-v1 10eps lr=0.0001
+v2-v2 30eps lr=0.001
+v4-v2 30eps lr=0.0001

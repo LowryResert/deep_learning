@@ -1,0 +1,253 @@
+生成数据列表完成！
+-------------------------------------------------------------------------------
+   Layer (type)         Input Shape          Output Shape         Param #    
+===============================================================================
+     Conv2D-1        [[1, 3, 224, 224]]   [1, 64, 224, 224]        1,792     
+   BatchNorm2D-1    [[1, 64, 224, 224]]   [1, 64, 224, 224]         256      
+      ReLU-1        [[1, 64, 224, 224]]   [1, 64, 224, 224]          0       
+     Conv2D-2       [[1, 64, 224, 224]]   [1, 64, 224, 224]       36,928     
+   BatchNorm2D-2    [[1, 64, 224, 224]]   [1, 64, 224, 224]         256      
+      ReLU-2        [[1, 64, 224, 224]]   [1, 64, 224, 224]          0       
+    MaxPool2D-1     [[1, 64, 224, 224]]   [1, 64, 112, 112]          0       
+     Conv2D-3       [[1, 64, 112, 112]]   [1, 128, 112, 112]      73,856     
+   BatchNorm2D-3    [[1, 128, 112, 112]]  [1, 128, 112, 112]        512      
+      ReLU-3        [[1, 128, 112, 112]]  [1, 128, 112, 112]         0       
+     Conv2D-4       [[1, 128, 112, 112]]  [1, 128, 112, 112]      147,584    
+   BatchNorm2D-4    [[1, 128, 112, 112]]  [1, 128, 112, 112]        512      
+      ReLU-4        [[1, 128, 112, 112]]  [1, 128, 112, 112]         0       
+    MaxPool2D-2     [[1, 128, 112, 112]]   [1, 128, 56, 56]          0       
+     Conv2D-5        [[1, 128, 56, 56]]    [1, 256, 56, 56]       295,168    
+   BatchNorm2D-5     [[1, 256, 56, 56]]    [1, 256, 56, 56]        1,024     
+      ReLU-5         [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-6        [[1, 256, 56, 56]]    [1, 256, 56, 56]       590,080    
+   BatchNorm2D-6     [[1, 256, 56, 56]]    [1, 256, 56, 56]        1,024     
+      ReLU-6         [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-7        [[1, 256, 56, 56]]    [1, 256, 56, 56]       590,080    
+   BatchNorm2D-7     [[1, 256, 56, 56]]    [1, 256, 56, 56]        1,024     
+      ReLU-7         [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+    MaxPool2D-3      [[1, 256, 56, 56]]    [1, 256, 28, 28]          0       
+     Conv2D-8        [[1, 256, 28, 28]]    [1, 512, 28, 28]      1,180,160   
+   BatchNorm2D-8     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+      ReLU-8         [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-9        [[1, 512, 28, 28]]    [1, 512, 28, 28]      2,359,808   
+   BatchNorm2D-9     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+      ReLU-9         [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-10       [[1, 512, 28, 28]]    [1, 512, 28, 28]      2,359,808   
+  BatchNorm2D-10     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+      ReLU-10        [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+    MaxPool2D-4      [[1, 512, 28, 28]]    [1, 512, 14, 14]          0       
+     Conv2D-11       [[1, 512, 14, 14]]    [1, 512, 14, 14]      2,359,808   
+  BatchNorm2D-11     [[1, 512, 14, 14]]    [1, 512, 14, 14]        2,048     
+      ReLU-11        [[1, 512, 14, 14]]    [1, 512, 14, 14]          0       
+     Conv2D-12       [[1, 512, 14, 14]]    [1, 512, 14, 14]      2,359,808   
+  BatchNorm2D-12     [[1, 512, 14, 14]]    [1, 512, 14, 14]        2,048     
+      ReLU-12        [[1, 512, 14, 14]]    [1, 512, 14, 14]          0       
+     Conv2D-13       [[1, 512, 14, 14]]    [1, 512, 14, 14]      2,359,808   
+  BatchNorm2D-13     [[1, 512, 14, 14]]    [1, 512, 14, 14]        2,048     
+      ReLU-13        [[1, 512, 14, 14]]    [1, 512, 14, 14]          0       
+    MaxPool2D-5      [[1, 512, 14, 14]]     [1, 512, 7, 7]           0       
+AdaptiveAvgPool2D-1   [[1, 512, 7, 7]]      [1, 512, 7, 7]           0       
+     Linear-1           [[1, 25088]]          [1, 4096]         102,764,544  
+      ReLU-14           [[1, 4096]]           [1, 4096]              0       
+     Dropout-1          [[1, 4096]]           [1, 4096]              0       
+     Linear-2           [[1, 4096]]           [1, 4096]         16,781,312   
+      ReLU-15           [[1, 4096]]           [1, 4096]              0       
+     Dropout-2          [[1, 4096]]           [1, 4096]              0       
+     Linear-3           [[1, 4096]]             [1, 5]            20,485     
+===============================================================================
+Total params: 134,297,925
+Trainable params: 134,281,029
+Non-trainable params: 16,896
+-------------------------------------------------------------------------------
+Input size (MB): 0.57
+Forward/backward pass size (MB): 322.13
+Params size (MB): 512.31
+Estimated Total Size (MB): 835.01
+-------------------------------------------------------------------------------
+
+The loss value printed in the log is the current step, and the metric is the average value of previous steps.
+Epoch 1/30
+step 137/137 - loss: 1.5981 - acc: 0.2336 - 230ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/0
+Eval begin...
+step 20/20 - loss: 1.8287 - acc: 0.2928 - 114ms/step
+Eval samples: 625
+Epoch 2/30
+step 137/137 - loss: 1.5242 - acc: 0.2926 - 232ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/1
+Eval begin...
+step 20/20 - loss: 1.5193 - acc: 0.3312 - 114ms/step
+Eval samples: 625
+Epoch 3/30
+step 137/137 - loss: 1.6840 - acc: 0.3113 - 237ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/2
+Eval begin...
+step 20/20 - loss: 1.5733 - acc: 0.3376 - 114ms/step
+Eval samples: 625
+Epoch 4/30
+step 137/137 - loss: 1.6092 - acc: 0.3045 - 245ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/3
+Eval begin...
+step 20/20 - loss: 1.5555 - acc: 0.3552 - 114ms/step
+Eval samples: 625
+Epoch 5/30
+step 137/137 - loss: 1.3327 - acc: 0.3109 - 249ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/4
+Eval begin...
+step 20/20 - loss: 1.4612 - acc: 0.3376 - 114ms/step
+Eval samples: 625
+Epoch 6/30
+step 137/137 - loss: 1.6176 - acc: 0.3067 - 250ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/5
+Eval begin...
+step 20/20 - loss: 1.5613 - acc: 0.3040 - 114ms/step
+Eval samples: 625
+Epoch 7/30
+step 137/137 - loss: 1.4763 - acc: 0.3081 - 249ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/6
+Eval begin...
+step 20/20 - loss: 1.4841 - acc: 0.3184 - 114ms/step
+Eval samples: 625
+Epoch 8/30
+step 137/137 - loss: 1.4076 - acc: 0.3086 - 248ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/7
+Eval begin...
+step 20/20 - loss: 1.4046 - acc: 0.3728 - 114ms/step
+Eval samples: 625
+Epoch 9/30
+step 137/137 - loss: 1.4179 - acc: 0.3042 - 248ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/8
+Eval begin...
+step 20/20 - loss: 1.4842 - acc: 0.3536 - 114ms/step
+Eval samples: 625
+Epoch 10/30
+step 137/137 - loss: 1.5220 - acc: 0.3074 - 248ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/9
+Eval begin...
+step 20/20 - loss: 1.5392 - acc: 0.3600 - 114ms/step
+Eval samples: 625
+Epoch 11/30
+step 137/137 - loss: 1.4718 - acc: 0.3255 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/10
+Eval begin...
+step 20/20 - loss: 1.4136 - acc: 0.3216 - 114ms/step
+Eval samples: 625
+Epoch 12/30
+step 137/137 - loss: 1.4798 - acc: 0.3209 - 245ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/11
+Eval begin...
+step 20/20 - loss: 1.4846 - acc: 0.3264 - 114ms/step
+Eval samples: 625
+Epoch 13/30
+step 137/137 - loss: 1.4801 - acc: 0.3221 - 245ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/12
+Eval begin...
+step 20/20 - loss: 1.6036 - acc: 0.3392 - 114ms/step
+Eval samples: 625
+Epoch 14/30
+step 137/137 - loss: 1.5064 - acc: 0.3264 - 245ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/13
+Eval begin...
+step 20/20 - loss: 1.4683 - acc: 0.3328 - 114ms/step
+Eval samples: 625
+Epoch 15/30
+step 137/137 - loss: 1.3141 - acc: 0.3266 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/14
+Eval begin...
+step 20/20 - loss: 1.2900 - acc: 0.3600 - 114ms/step
+Eval samples: 625
+Epoch 16/30
+step 137/137 - loss: 1.3270 - acc: 0.3488 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/15
+Eval begin...
+step 20/20 - loss: 1.4727 - acc: 0.3392 - 114ms/step
+Eval samples: 625
+Epoch 17/30
+step 137/137 - loss: 1.2629 - acc: 0.3365 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/16
+Eval begin...
+step 20/20 - loss: 1.5282 - acc: 0.3216 - 114ms/step
+Eval samples: 625
+Epoch 18/30
+step 137/137 - loss: 1.4174 - acc: 0.3159 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/17
+Eval begin...
+step 20/20 - loss: 1.4595 - acc: 0.3312 - 114ms/step
+Eval samples: 625
+Epoch 19/30
+step 137/137 - loss: 1.3937 - acc: 0.3333 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/18
+Eval begin...
+step 20/20 - loss: 1.3656 - acc: 0.3584 - 114ms/step
+Eval samples: 625
+Epoch 20/30
+step 137/137 - loss: 1.5069 - acc: 0.3328 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/19
+Eval begin...
+step 20/20 - loss: 1.5981 - acc: 0.3232 - 114ms/step
+Eval samples: 625
+Epoch 21/30
+step 137/137 - loss: 1.3225 - acc: 0.3202 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/20
+Eval begin...
+step 20/20 - loss: 1.5474 - acc: 0.3520 - 114ms/step
+Eval samples: 625
+Epoch 22/30
+step 137/137 - loss: 1.5025 - acc: 0.3264 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/21
+Eval begin...
+step 20/20 - loss: 1.2023 - acc: 0.4160 - 114ms/step
+Eval samples: 625
+Epoch 23/30
+step 137/137 - loss: 1.4377 - acc: 0.3337 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/22
+Eval begin...
+step 20/20 - loss: 1.3204 - acc: 0.3616 - 114ms/step
+Eval samples: 625
+Epoch 24/30
+step 137/137 - loss: 1.2217 - acc: 0.3358 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/23
+Eval begin...
+step 20/20 - loss: 1.3239 - acc: 0.3392 - 114ms/step
+Eval samples: 625
+Epoch 25/30
+step 137/137 - loss: 1.5047 - acc: 0.3296 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/24
+Eval begin...
+step 20/20 - loss: 1.3084 - acc: 0.3456 - 114ms/step
+Eval samples: 625
+Epoch 26/30
+step 137/137 - loss: 1.2269 - acc: 0.3285 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/25
+Eval begin...
+step 20/20 - loss: 1.4409 - acc: 0.3296 - 115ms/step
+Eval samples: 625
+Epoch 27/30
+step 137/137 - loss: 1.2386 - acc: 0.3435 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/26
+Eval begin...
+step 20/20 - loss: 1.3191 - acc: 0.3968 - 115ms/step
+Eval samples: 625
+Epoch 28/30
+step 137/137 - loss: 1.2024 - acc: 0.3575 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/27
+Eval begin...
+step 20/20 - loss: 1.2640 - acc: 0.4128 - 114ms/step
+Eval samples: 625
+Epoch 29/30
+step 137/137 - loss: 1.4286 - acc: 0.3717 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/28
+Eval begin...
+step 20/20 - loss: 1.2950 - acc: 0.3760 - 114ms/step
+Eval samples: 625
+Epoch 30/30
+step 137/137 - loss: 1.1394 - acc: 0.3785 - 246ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/29
+Eval begin...
+step 20/20 - loss: 1.4472 - acc: 0.4400 - 114ms/step
+Eval samples: 625
+save checkpoint at /home/roots/ruiqingluo/model/net6vgg16_30ep/final
+Eval begin...
+step 10/20 [==============>...............] - loss: 1.2793 - acc: 0.4406 - ETA: 1s - 123ms/stepstep 20/20 [==============================] - loss: 1.4472 - acc: 0.4400 - 114ms/step          
+Eval samples: 625
+{'loss': [1.4472092], 'acc': 0.44}

@@ -1,0 +1,412 @@
+生成数据列表完成！
+---------------------------------------------------------------------------
+ Layer (type)       Input Shape          Output Shape         Param #    
+===========================================================================
+   Conv2D-1      [[1, 3, 224, 224]]   [1, 64, 112, 112]        9,472     
+ BatchNorm2D-1  [[1, 64, 112, 112]]   [1, 64, 112, 112]         256      
+    ReLU-1      [[1, 64, 112, 112]]   [1, 64, 112, 112]          0       
+  MaxPool2D-1   [[1, 64, 112, 112]]    [1, 64, 56, 56]           0       
+   Conv2D-2      [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,928     
+ BatchNorm2D-2   [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+   Conv2D-3      [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,928     
+ BatchNorm2D-3   [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+  Residual-1     [[1, 64, 56, 56]]     [1, 64, 56, 56]           0       
+   Conv2D-4      [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,928     
+ BatchNorm2D-4   [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+   Conv2D-5      [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,928     
+ BatchNorm2D-5   [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+  Residual-2     [[1, 64, 56, 56]]     [1, 64, 56, 56]           0       
+   Conv2D-6      [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,928     
+ BatchNorm2D-6   [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+   Conv2D-7      [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,928     
+ BatchNorm2D-7   [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+  Residual-3     [[1, 64, 56, 56]]     [1, 64, 56, 56]           0       
+   Conv2D-8      [[1, 64, 56, 56]]     [1, 128, 28, 28]       73,856     
+ BatchNorm2D-8   [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+   Conv2D-9      [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,584    
+ BatchNorm2D-9   [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+   Conv2D-10     [[1, 64, 56, 56]]     [1, 128, 28, 28]        8,320     
+  Residual-4     [[1, 64, 56, 56]]     [1, 128, 28, 28]          0       
+   Conv2D-11     [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,584    
+BatchNorm2D-10   [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+   Conv2D-12     [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,584    
+BatchNorm2D-11   [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+  Residual-5     [[1, 128, 28, 28]]    [1, 128, 28, 28]          0       
+   Conv2D-13     [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,584    
+BatchNorm2D-12   [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+   Conv2D-14     [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,584    
+BatchNorm2D-13   [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+  Residual-6     [[1, 128, 28, 28]]    [1, 128, 28, 28]          0       
+   Conv2D-15     [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,584    
+BatchNorm2D-14   [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+   Conv2D-16     [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,584    
+BatchNorm2D-15   [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+  Residual-7     [[1, 128, 28, 28]]    [1, 128, 28, 28]          0       
+   Conv2D-17     [[1, 128, 28, 28]]    [1, 256, 14, 14]       295,168    
+BatchNorm2D-16   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+   Conv2D-18     [[1, 256, 14, 14]]    [1, 256, 14, 14]       590,080    
+BatchNorm2D-17   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+   Conv2D-19     [[1, 128, 28, 28]]    [1, 256, 14, 14]       33,024     
+  Residual-8     [[1, 128, 28, 28]]    [1, 256, 14, 14]          0       
+   Conv2D-20     [[1, 256, 14, 14]]    [1, 256, 14, 14]       590,080    
+BatchNorm2D-18   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+   Conv2D-21     [[1, 256, 14, 14]]    [1, 256, 14, 14]       590,080    
+BatchNorm2D-19   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+  Residual-9     [[1, 256, 14, 14]]    [1, 256, 14, 14]          0       
+   Conv2D-22     [[1, 256, 14, 14]]    [1, 256, 14, 14]       590,080    
+BatchNorm2D-20   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+   Conv2D-23     [[1, 256, 14, 14]]    [1, 256, 14, 14]       590,080    
+BatchNorm2D-21   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+  Residual-10    [[1, 256, 14, 14]]    [1, 256, 14, 14]          0       
+   Conv2D-24     [[1, 256, 14, 14]]    [1, 256, 14, 14]       590,080    
+BatchNorm2D-22   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+   Conv2D-25     [[1, 256, 14, 14]]    [1, 256, 14, 14]       590,080    
+BatchNorm2D-23   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+  Residual-11    [[1, 256, 14, 14]]    [1, 256, 14, 14]          0       
+   Conv2D-26     [[1, 256, 14, 14]]    [1, 256, 14, 14]       590,080    
+BatchNorm2D-24   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+   Conv2D-27     [[1, 256, 14, 14]]    [1, 256, 14, 14]       590,080    
+BatchNorm2D-25   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+  Residual-12    [[1, 256, 14, 14]]    [1, 256, 14, 14]          0       
+   Conv2D-28     [[1, 256, 14, 14]]    [1, 256, 14, 14]       590,080    
+BatchNorm2D-26   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+   Conv2D-29     [[1, 256, 14, 14]]    [1, 256, 14, 14]       590,080    
+BatchNorm2D-27   [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+  Residual-13    [[1, 256, 14, 14]]    [1, 256, 14, 14]          0       
+   Conv2D-30     [[1, 256, 14, 14]]     [1, 512, 7, 7]       1,180,160   
+BatchNorm2D-28    [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+   Conv2D-31      [[1, 512, 7, 7]]      [1, 512, 7, 7]       2,359,808   
+BatchNorm2D-29    [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+   Conv2D-32     [[1, 256, 14, 14]]     [1, 512, 7, 7]        131,584    
+  Residual-14    [[1, 256, 14, 14]]     [1, 512, 7, 7]           0       
+   Conv2D-33      [[1, 512, 7, 7]]      [1, 512, 7, 7]       2,359,808   
+BatchNorm2D-30    [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+   Conv2D-34      [[1, 512, 7, 7]]      [1, 512, 7, 7]       2,359,808   
+BatchNorm2D-31    [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+  Residual-15     [[1, 512, 7, 7]]      [1, 512, 7, 7]           0       
+   Conv2D-35      [[1, 512, 7, 7]]      [1, 512, 7, 7]       2,359,808   
+BatchNorm2D-32    [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+   Conv2D-36      [[1, 512, 7, 7]]      [1, 512, 7, 7]       2,359,808   
+BatchNorm2D-33    [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+  Residual-16     [[1, 512, 7, 7]]      [1, 512, 7, 7]           0       
+  AvgPool2D-1     [[1, 512, 7, 7]]      [1, 512, 3, 3]           0       
+   Flatten-1      [[1, 512, 3, 3]]        [1, 4608]              0       
+   Linear-1         [[1, 4608]]            [1, 512]          2,359,808   
+   Linear-2          [[1, 512]]             [1, 5]             2,565     
+===========================================================================
+Total params: 23,668,997
+Trainable params: 23,638,533
+Non-trainable params: 30,464
+---------------------------------------------------------------------------
+Input size (MB): 0.57
+Forward/backward pass size (MB): 73.96
+Params size (MB): 90.29
+Estimated Total Size (MB): 164.82
+---------------------------------------------------------------------------
+
+The loss value printed in the log is the current step, and the metric is the average value of previous steps.
+Epoch 1/50
+step 69/69 - loss: 1.5953 - acc: 0.2823 - 230ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/0
+Eval begin...
+step 10/10 - loss: 1.3758 - acc: 0.3840 - 226ms/step
+Eval samples: 625
+Epoch 2/50
+step 69/69 - loss: 1.1518 - acc: 0.4281 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/1
+Eval begin...
+step 10/10 - loss: 1.3793 - acc: 0.4464 - 226ms/step
+Eval samples: 625
+Epoch 3/50
+step 69/69 - loss: 1.5101 - acc: 0.5017 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/2
+Eval begin...
+step 10/10 - loss: 1.3447 - acc: 0.5056 - 226ms/step
+Eval samples: 625
+Epoch 4/50
+step 69/69 - loss: 1.1866 - acc: 0.5623 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/3
+Eval begin...
+step 10/10 - loss: 1.2562 - acc: 0.5456 - 227ms/step
+Eval samples: 625
+Epoch 5/50
+step 69/69 - loss: 1.0376 - acc: 0.6014 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/4
+Eval begin...
+step 10/10 - loss: 1.2535 - acc: 0.5584 - 226ms/step
+Eval samples: 625
+Epoch 6/50
+step 69/69 - loss: 1.0977 - acc: 0.6535 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/5
+Eval begin...
+step 10/10 - loss: 1.2019 - acc: 0.5376 - 226ms/step
+Eval samples: 625
+Epoch 7/50
+step 69/69 - loss: 0.9381 - acc: 0.6914 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/6
+Eval begin...
+step 10/10 - loss: 1.3343 - acc: 0.5712 - 226ms/step
+Eval samples: 625
+Epoch 8/50
+step 69/69 - loss: 0.8960 - acc: 0.7298 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/7
+Eval begin...
+step 10/10 - loss: 1.3098 - acc: 0.5344 - 226ms/step
+Eval samples: 625
+Epoch 9/50
+step 69/69 - loss: 0.3704 - acc: 0.7742 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/8
+Eval begin...
+step 10/10 - loss: 1.3439 - acc: 0.5872 - 228ms/step
+Eval samples: 625
+Epoch 10/50
+step 69/69 - loss: 0.9698 - acc: 0.8149 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/9
+Eval begin...
+step 10/10 - loss: 1.2839 - acc: 0.5696 - 226ms/step
+Eval samples: 625
+Epoch 11/50
+step 69/69 - loss: 0.7279 - acc: 0.8425 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/10
+Eval begin...
+step 10/10 - loss: 1.5999 - acc: 0.5456 - 226ms/step
+Eval samples: 625
+Epoch 12/50
+step 69/69 - loss: 0.5808 - acc: 0.8693 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/11
+Eval begin...
+step 10/10 - loss: 1.3362 - acc: 0.5456 - 227ms/step
+Eval samples: 625
+Epoch 13/50
+step 69/69 - loss: 0.6645 - acc: 0.9077 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/12
+Eval begin...
+step 10/10 - loss: 1.8028 - acc: 0.5728 - 225ms/step
+Eval samples: 625
+Epoch 14/50
+step 69/69 - loss: 0.1526 - acc: 0.9163 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/13
+Eval begin...
+step 10/10 - loss: 1.3590 - acc: 0.5056 - 227ms/step
+Eval samples: 625
+Epoch 15/50
+step 69/69 - loss: 0.1559 - acc: 0.9335 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/14
+Eval begin...
+step 10/10 - loss: 2.1767 - acc: 0.5904 - 226ms/step
+Eval samples: 625
+Epoch 16/50
+step 69/69 - loss: 0.2970 - acc: 0.9397 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/15
+Eval begin...
+step 10/10 - loss: 2.0872 - acc: 0.5232 - 226ms/step
+Eval samples: 625
+Epoch 17/50
+step 69/69 - loss: 0.2148 - acc: 0.9509 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/16
+Eval begin...
+step 10/10 - loss: 1.6359 - acc: 0.5664 - 226ms/step
+Eval samples: 625
+Epoch 18/50
+step 69/69 - loss: 0.1222 - acc: 0.9641 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/17
+Eval begin...
+step 10/10 - loss: 2.7653 - acc: 0.5376 - 226ms/step
+Eval samples: 625
+Epoch 19/50
+step 69/69 - loss: 0.1361 - acc: 0.9582 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/18
+Eval begin...
+step 10/10 - loss: 2.1293 - acc: 0.5504 - 226ms/step
+Eval samples: 625
+Epoch 20/50
+step 69/69 - loss: 0.0232 - acc: 0.9531 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/19
+Eval begin...
+step 10/10 - loss: 1.6695 - acc: 0.5648 - 226ms/step
+Eval samples: 625
+Epoch 21/50
+step 69/69 - loss: 0.0609 - acc: 0.9605 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/20
+Eval begin...
+step 10/10 - loss: 2.1453 - acc: 0.5600 - 226ms/step
+Eval samples: 625
+Epoch 22/50
+step 69/69 - loss: 0.0138 - acc: 0.9655 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/21
+Eval begin...
+step 10/10 - loss: 1.7816 - acc: 0.5872 - 227ms/step
+Eval samples: 625
+Epoch 23/50
+step 69/69 - loss: 0.1832 - acc: 0.9678 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/22
+Eval begin...
+step 10/10 - loss: 1.7717 - acc: 0.5712 - 227ms/step
+Eval samples: 625
+Epoch 24/50
+step 69/69 - loss: nan - acc: 0.3234 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/23
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 25/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/24
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 225ms/step
+Eval samples: 625
+Epoch 26/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/25
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 27/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/26
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 28/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/27
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 29/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/28
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 227ms/step
+Eval samples: 625
+Epoch 30/50
+step 69/69 - loss: nan - acc: 0.2000 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/29
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 227ms/step
+Eval samples: 625
+Epoch 31/50
+step 69/69 - loss: nan - acc: 0.2000 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/30
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 32/50
+step 69/69 - loss: nan - acc: 0.2000 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/31
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 227ms/step
+Eval samples: 625
+Epoch 33/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/32
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 34/50
+step 69/69 - loss: nan - acc: 0.2000 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/33
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 35/50
+step 69/69 - loss: nan - acc: 0.2000 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/34
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 36/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/35
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 37/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/36
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 38/50
+step 69/69 - loss: nan - acc: 0.2000 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/37
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 39/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/38
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 40/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/39
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 41/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/40
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 227ms/step
+Eval samples: 625
+Epoch 42/50
+step 69/69 - loss: nan - acc: 0.2000 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/41
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 228ms/step
+Eval samples: 625
+Epoch 43/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/42
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 227ms/step
+Eval samples: 625
+Epoch 44/50
+step 69/69 - loss: nan - acc: 0.2000 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/43
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 45/50
+step 69/69 - loss: nan - acc: 0.2000 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/44
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+Epoch 46/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/45
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 227ms/step
+Eval samples: 625
+Epoch 47/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/46
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 227ms/step
+Eval samples: 625
+Epoch 48/50
+step 69/69 - loss: nan - acc: 0.2000 - 227ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/47
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 227ms/step
+Eval samples: 625
+Epoch 49/50
+step 69/69 - loss: nan - acc: 0.2000 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/48
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 227ms/step
+Eval samples: 625
+Epoch 50/50
+step 69/69 - loss: nan - acc: 0.2000 - 228ms/step
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/49
+Eval begin...
+step 10/10 - loss: nan - acc: 0.2000 - 226ms/step
+Eval samples: 625
+save checkpoint at /home/roots/ruiqingluo/model/final_version_50ep/final
+Eval begin...
+step 10/10 [==============================] - loss: nan - acc: 0.2000 - 227ms/step
+Eval samples: 625
+{'loss': [nan], 'acc': 0.2}

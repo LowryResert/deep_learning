@@ -1,0 +1,563 @@
+生成数据列表完成！
+-------------------------------------------------------------------------------
+   Layer (type)         Input Shape          Output Shape         Param #    
+===============================================================================
+     Conv2D-1        [[1, 3, 224, 224]]   [1, 64, 112, 112]        9,408     
+   BatchNorm2D-1    [[1, 64, 112, 112]]   [1, 64, 112, 112]         256      
+      ReLU-1        [[1, 64, 112, 112]]   [1, 64, 112, 112]          0       
+    MaxPool2D-1     [[1, 64, 112, 112]]    [1, 64, 56, 56]           0       
+     Conv2D-3        [[1, 64, 56, 56]]     [1, 64, 56, 56]         4,096     
+   BatchNorm2D-3     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+      ReLU-2         [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-4        [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,864     
+   BatchNorm2D-4     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+     Conv2D-5        [[1, 64, 56, 56]]     [1, 256, 56, 56]       16,384     
+   BatchNorm2D-5     [[1, 256, 56, 56]]    [1, 256, 56, 56]        1,024     
+     Conv2D-2        [[1, 64, 56, 56]]     [1, 256, 56, 56]       16,384     
+   BatchNorm2D-2     [[1, 256, 56, 56]]    [1, 256, 56, 56]        1,024     
+ BottleneckBlock-1   [[1, 64, 56, 56]]     [1, 256, 56, 56]          0       
+     Conv2D-6        [[1, 256, 56, 56]]    [1, 64, 56, 56]        16,384     
+   BatchNorm2D-6     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+      ReLU-3         [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-7        [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,864     
+   BatchNorm2D-7     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+     Conv2D-8        [[1, 64, 56, 56]]     [1, 256, 56, 56]       16,384     
+   BatchNorm2D-8     [[1, 256, 56, 56]]    [1, 256, 56, 56]        1,024     
+ BottleneckBlock-2   [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-9        [[1, 256, 56, 56]]    [1, 64, 56, 56]        16,384     
+   BatchNorm2D-9     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+      ReLU-4         [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-10       [[1, 64, 56, 56]]     [1, 64, 56, 56]        36,864     
+  BatchNorm2D-10     [[1, 64, 56, 56]]     [1, 64, 56, 56]          256      
+     Conv2D-11       [[1, 64, 56, 56]]     [1, 256, 56, 56]       16,384     
+  BatchNorm2D-11     [[1, 256, 56, 56]]    [1, 256, 56, 56]        1,024     
+ BottleneckBlock-3   [[1, 256, 56, 56]]    [1, 256, 56, 56]          0       
+     Conv2D-13       [[1, 256, 56, 56]]    [1, 128, 56, 56]       32,768     
+  BatchNorm2D-13     [[1, 128, 56, 56]]    [1, 128, 56, 56]         512      
+      ReLU-5         [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-14       [[1, 128, 56, 56]]    [1, 128, 28, 28]       147,456    
+  BatchNorm2D-14     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+     Conv2D-15       [[1, 128, 28, 28]]    [1, 512, 28, 28]       65,536     
+  BatchNorm2D-15     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+     Conv2D-12       [[1, 256, 56, 56]]    [1, 512, 28, 28]       131,072    
+  BatchNorm2D-12     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+ BottleneckBlock-4   [[1, 256, 56, 56]]    [1, 512, 28, 28]          0       
+     Conv2D-16       [[1, 512, 28, 28]]    [1, 128, 28, 28]       65,536     
+  BatchNorm2D-16     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+      ReLU-6         [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-17       [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,456    
+  BatchNorm2D-17     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+     Conv2D-18       [[1, 128, 28, 28]]    [1, 512, 28, 28]       65,536     
+  BatchNorm2D-18     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+ BottleneckBlock-5   [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-19       [[1, 512, 28, 28]]    [1, 128, 28, 28]       65,536     
+  BatchNorm2D-19     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+      ReLU-7         [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-20       [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,456    
+  BatchNorm2D-20     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+     Conv2D-21       [[1, 128, 28, 28]]    [1, 512, 28, 28]       65,536     
+  BatchNorm2D-21     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+ BottleneckBlock-6   [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-22       [[1, 512, 28, 28]]    [1, 128, 28, 28]       65,536     
+  BatchNorm2D-22     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+      ReLU-8         [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-23       [[1, 128, 28, 28]]    [1, 128, 28, 28]       147,456    
+  BatchNorm2D-23     [[1, 128, 28, 28]]    [1, 128, 28, 28]         512      
+     Conv2D-24       [[1, 128, 28, 28]]    [1, 512, 28, 28]       65,536     
+  BatchNorm2D-24     [[1, 512, 28, 28]]    [1, 512, 28, 28]        2,048     
+ BottleneckBlock-7   [[1, 512, 28, 28]]    [1, 512, 28, 28]          0       
+     Conv2D-26       [[1, 512, 28, 28]]    [1, 256, 28, 28]       131,072    
+  BatchNorm2D-26     [[1, 256, 28, 28]]    [1, 256, 28, 28]        1,024     
+      ReLU-9        [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-27       [[1, 256, 28, 28]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-27     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-28       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-28    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+     Conv2D-25       [[1, 512, 28, 28]]   [1, 1024, 14, 14]       524,288    
+  BatchNorm2D-25    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+ BottleneckBlock-8   [[1, 512, 28, 28]]   [1, 1024, 14, 14]          0       
+     Conv2D-29      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-29     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-10       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-30       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-30     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-31       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-31    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+ BottleneckBlock-9  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-32      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-32     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-11       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-33       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-33     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-34       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-34    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-10  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-35      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-35     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-12       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-36       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-36     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-37       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-37    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-11  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-38      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-38     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-13       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-39       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-39     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-40       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-40    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-12  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-41      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-41     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-14       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-42       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-42     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-43       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-43    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-13  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-44      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-44     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-15       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-45       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-45     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-46       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-46    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-14  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-47      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-47     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-16       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-48       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-48     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-49       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-49    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-15  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-50      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-50     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-17       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-51       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-51     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-52       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-52    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-16  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-53      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-53     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-18       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-54       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-54     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-55       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-55    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-17  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-56      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-56     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-19       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-57       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-57     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-58       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-58    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-18  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-59      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-59     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-20       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-60       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-60     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-61       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-61    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-19  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-62      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-62     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-21       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-63       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-63     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-64       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-64    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-20  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-65      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-65     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-22       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-66       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-66     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-67       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-67    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-21  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-68      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-68     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-23       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-69       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-69     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-70       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-70    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-22  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-71      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-71     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-24       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-72       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-72     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-73       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-73    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-23  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-74      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-74     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-25       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-75       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-75     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-76       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-76    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-24  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-77      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-77     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-26       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-78       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-78     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-79       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-79    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-25  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-80      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-80     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-27       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-81       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-81     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-82       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-82    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-26  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-83      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-83     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-28       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-84       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-84     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-85       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-85    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-27  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-86      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-86     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-29       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-87       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-87     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-88       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-88    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-28  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-89      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-89     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-30       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-90       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-90     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-91       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-91    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-29  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-92      [[1, 1024, 14, 14]]    [1, 256, 14, 14]       262,144    
+  BatchNorm2D-92     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+      ReLU-31       [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-93       [[1, 256, 14, 14]]    [1, 256, 14, 14]       589,824    
+  BatchNorm2D-93     [[1, 256, 14, 14]]    [1, 256, 14, 14]        1,024     
+     Conv2D-94       [[1, 256, 14, 14]]   [1, 1024, 14, 14]       262,144    
+  BatchNorm2D-94    [[1, 1024, 14, 14]]   [1, 1024, 14, 14]        4,096     
+BottleneckBlock-30  [[1, 1024, 14, 14]]   [1, 1024, 14, 14]          0       
+     Conv2D-96      [[1, 1024, 14, 14]]    [1, 512, 14, 14]       524,288    
+  BatchNorm2D-96     [[1, 512, 14, 14]]    [1, 512, 14, 14]        2,048     
+      ReLU-32        [[1, 2048, 7, 7]]     [1, 2048, 7, 7]           0       
+     Conv2D-97       [[1, 512, 14, 14]]     [1, 512, 7, 7]       2,359,296   
+  BatchNorm2D-97      [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+     Conv2D-98        [[1, 512, 7, 7]]     [1, 2048, 7, 7]       1,048,576   
+  BatchNorm2D-98     [[1, 2048, 7, 7]]     [1, 2048, 7, 7]         8,192     
+     Conv2D-95      [[1, 1024, 14, 14]]    [1, 2048, 7, 7]       2,097,152   
+  BatchNorm2D-95     [[1, 2048, 7, 7]]     [1, 2048, 7, 7]         8,192     
+BottleneckBlock-31  [[1, 1024, 14, 14]]    [1, 2048, 7, 7]           0       
+     Conv2D-99       [[1, 2048, 7, 7]]      [1, 512, 7, 7]       1,048,576   
+  BatchNorm2D-99      [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+      ReLU-33        [[1, 2048, 7, 7]]     [1, 2048, 7, 7]           0       
+    Conv2D-100        [[1, 512, 7, 7]]      [1, 512, 7, 7]       2,359,296   
+  BatchNorm2D-100     [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+    Conv2D-101        [[1, 512, 7, 7]]     [1, 2048, 7, 7]       1,048,576   
+  BatchNorm2D-101    [[1, 2048, 7, 7]]     [1, 2048, 7, 7]         8,192     
+BottleneckBlock-32   [[1, 2048, 7, 7]]     [1, 2048, 7, 7]           0       
+    Conv2D-102       [[1, 2048, 7, 7]]      [1, 512, 7, 7]       1,048,576   
+  BatchNorm2D-102     [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+      ReLU-34        [[1, 2048, 7, 7]]     [1, 2048, 7, 7]           0       
+    Conv2D-103        [[1, 512, 7, 7]]      [1, 512, 7, 7]       2,359,296   
+  BatchNorm2D-103     [[1, 512, 7, 7]]      [1, 512, 7, 7]         2,048     
+    Conv2D-104        [[1, 512, 7, 7]]     [1, 2048, 7, 7]       1,048,576   
+  BatchNorm2D-104    [[1, 2048, 7, 7]]     [1, 2048, 7, 7]         8,192     
+BottleneckBlock-33   [[1, 2048, 7, 7]]     [1, 2048, 7, 7]           0       
+AdaptiveAvgPool2D-1  [[1, 2048, 7, 7]]     [1, 2048, 1, 1]           0       
+     Linear-1           [[1, 2048]]             [1, 5]            10,245     
+===============================================================================
+Total params: 42,615,749
+Trainable params: 42,405,061
+Non-trainable params: 210,688
+-------------------------------------------------------------------------------
+Input size (MB): 0.57
+Forward/backward pass size (MB): 391.63
+Params size (MB): 162.57
+Estimated Total Size (MB): 554.77
+-------------------------------------------------------------------------------
+
+The loss value printed in the log is the current step, and the metric is the average value of previous steps.
+Epoch 1/50
+step 69/69 - loss: 0.7183 - acc: 0.6382 - 414ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/0
+Eval begin...
+step 10/10 - loss: 0.9140 - acc: 0.5936 - 238ms/step
+Eval samples: 625
+Epoch 2/50
+step 69/69 - loss: 0.4226 - acc: 0.7954 - 420ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/1
+Eval begin...
+step 10/10 - loss: 0.6753 - acc: 0.7520 - 238ms/step
+Eval samples: 625
+Epoch 3/50
+step 69/69 - loss: 0.5441 - acc: 0.8457 - 426ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/2
+Eval begin...
+step 10/10 - loss: 0.5136 - acc: 0.7568 - 237ms/step
+Eval samples: 625
+Epoch 4/50
+step 69/69 - loss: 0.4722 - acc: 0.8814 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/3
+Eval begin...
+step 10/10 - loss: 1.2414 - acc: 0.6352 - 238ms/step
+Eval samples: 625
+Epoch 5/50
+step 69/69 - loss: 0.4617 - acc: 0.8640 - 453ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/4
+Eval begin...
+step 10/10 - loss: 2.5144 - acc: 0.4608 - 238ms/step
+Eval samples: 625
+Epoch 6/50
+step 69/69 - loss: 0.3245 - acc: 0.7632 - 450ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/5
+Eval begin...
+step 10/10 - loss: 0.4482 - acc: 0.7024 - 239ms/step
+Eval samples: 625
+Epoch 7/50
+step 69/69 - loss: 0.5580 - acc: 0.8734 - 446ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/6
+Eval begin...
+step 10/10 - loss: 0.6498 - acc: 0.7664 - 236ms/step
+Eval samples: 625
+Epoch 8/50
+step 69/69 - loss: 0.4188 - acc: 0.9262 - 450ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/7
+Eval begin...
+step 10/10 - loss: 0.5444 - acc: 0.7968 - 237ms/step
+Eval samples: 625
+Epoch 9/50
+step 69/69 - loss: 0.1180 - acc: 0.9296 - 470ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/8
+Eval begin...
+step 10/10 - loss: 0.5799 - acc: 0.7200 - 238ms/step
+Eval samples: 625
+Epoch 10/50
+step 69/69 - loss: 0.0400 - acc: 0.9621 - 445ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/9
+Eval begin...
+step 10/10 - loss: 0.5796 - acc: 0.8032 - 239ms/step
+Eval samples: 625
+Epoch 11/50
+step 69/69 - loss: 0.1803 - acc: 0.9787 - 445ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/10
+Eval begin...
+step 10/10 - loss: 0.4952 - acc: 0.8064 - 237ms/step
+Eval samples: 625
+Epoch 12/50
+step 69/69 - loss: 0.0451 - acc: 0.9762 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/11
+Eval begin...
+step 10/10 - loss: 0.5239 - acc: 0.7040 - 239ms/step
+Eval samples: 625
+Epoch 13/50
+step 69/69 - loss: 0.0763 - acc: 0.9639 - 443ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/12
+Eval begin...
+step 10/10 - loss: 1.1669 - acc: 0.8016 - 239ms/step
+Eval samples: 625
+Epoch 14/50
+step 69/69 - loss: 0.0463 - acc: 0.9742 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/13
+Eval begin...
+step 10/10 - loss: 0.8604 - acc: 0.7760 - 238ms/step
+Eval samples: 625
+Epoch 15/50
+step 69/69 - loss: 0.0137 - acc: 0.9760 - 443ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/14
+Eval begin...
+step 10/10 - loss: 1.1439 - acc: 0.7328 - 238ms/step
+Eval samples: 625
+Epoch 16/50
+step 69/69 - loss: 0.3127 - acc: 0.9815 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/15
+Eval begin...
+step 10/10 - loss: 2.6920 - acc: 0.7552 - 240ms/step
+Eval samples: 625
+Epoch 17/50
+step 69/69 - loss: 0.2042 - acc: 0.9159 - 443ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/16
+Eval begin...
+step 10/10 - loss: 2.7763 - acc: 0.5904 - 238ms/step
+Eval samples: 625
+Epoch 18/50
+step 69/69 - loss: 0.1206 - acc: 0.9358 - 443ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/17
+Eval begin...
+step 10/10 - loss: 0.5106 - acc: 0.8128 - 237ms/step
+Eval samples: 625
+Epoch 19/50
+step 69/69 - loss: 0.3687 - acc: 0.9893 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/18
+Eval begin...
+step 10/10 - loss: 1.1533 - acc: 0.8320 - 239ms/step
+Eval samples: 625
+Epoch 20/50
+step 69/69 - loss: 0.1181 - acc: 0.9883 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/19
+Eval begin...
+step 10/10 - loss: 0.8180 - acc: 0.8128 - 245ms/step
+Eval samples: 625
+Epoch 21/50
+step 69/69 - loss: 0.0552 - acc: 0.9874 - 468ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/20
+Eval begin...
+step 10/10 - loss: 0.8598 - acc: 0.7488 - 239ms/step
+Eval samples: 625
+Epoch 22/50
+step 69/69 - loss: 0.2473 - acc: 0.9929 - 449ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/21
+Eval begin...
+step 10/10 - loss: 1.0953 - acc: 0.8256 - 238ms/step
+Eval samples: 625
+Epoch 23/50
+step 69/69 - loss: 0.0277 - acc: 0.9909 - 445ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/22
+Eval begin...
+step 10/10 - loss: 0.8453 - acc: 0.8176 - 237ms/step
+Eval samples: 625
+Epoch 24/50
+step 69/69 - loss: 0.0047 - acc: 0.9893 - 445ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/23
+Eval begin...
+step 10/10 - loss: 1.0658 - acc: 0.7888 - 236ms/step
+Eval samples: 625
+Epoch 25/50
+step 69/69 - loss: 0.3428 - acc: 0.9879 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/24
+Eval begin...
+step 10/10 - loss: 1.1619 - acc: 0.7424 - 238ms/step
+Eval samples: 625
+Epoch 26/50
+step 69/69 - loss: 0.0064 - acc: 0.9778 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/25
+Eval begin...
+step 10/10 - loss: 0.7888 - acc: 0.7520 - 238ms/step
+Eval samples: 625
+Epoch 27/50
+step 69/69 - loss: 0.0077 - acc: 0.9906 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/26
+Eval begin...
+step 10/10 - loss: 0.5945 - acc: 0.8048 - 237ms/step
+Eval samples: 625
+Epoch 28/50
+step 69/69 - loss: 0.0529 - acc: 0.9913 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/27
+Eval begin...
+step 10/10 - loss: 1.3141 - acc: 0.6896 - 238ms/step
+Eval samples: 625
+Epoch 29/50
+step 69/69 - loss: 0.0809 - acc: 0.9890 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/28
+Eval begin...
+step 10/10 - loss: 0.7134 - acc: 0.7904 - 238ms/step
+Eval samples: 625
+Epoch 30/50
+step 69/69 - loss: 0.0716 - acc: 0.9886 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/29
+Eval begin...
+step 10/10 - loss: 0.8831 - acc: 0.7872 - 239ms/step
+Eval samples: 625
+Epoch 31/50
+step 69/69 - loss: 0.0190 - acc: 0.9909 - 445ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/30
+Eval begin...
+step 10/10 - loss: 0.7385 - acc: 0.7168 - 237ms/step
+Eval samples: 625
+Epoch 32/50
+step 69/69 - loss: 8.9400e-04 - acc: 0.9906 - 445ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/31
+Eval begin...
+step 10/10 - loss: 0.7755 - acc: 0.7968 - 237ms/step
+Eval samples: 625
+Epoch 33/50
+step 69/69 - loss: 0.0015 - acc: 0.9925 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/32
+Eval begin...
+step 10/10 - loss: 1.1755 - acc: 0.7808 - 238ms/step
+Eval samples: 625
+Epoch 34/50
+step 69/69 - loss: 0.0329 - acc: 0.9847 - 445ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/33
+Eval begin...
+step 10/10 - loss: 1.0203 - acc: 0.7216 - 238ms/step
+Eval samples: 625
+Epoch 35/50
+step 69/69 - loss: 0.0663 - acc: 0.9669 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/34
+Eval begin...
+step 10/10 - loss: 1.9868 - acc: 0.7056 - 237ms/step
+Eval samples: 625
+Epoch 36/50
+step 69/69 - loss: 0.0719 - acc: 0.9870 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/35
+Eval begin...
+step 10/10 - loss: 1.0393 - acc: 0.7792 - 237ms/step
+Eval samples: 625
+Epoch 37/50
+step 69/69 - loss: 0.0310 - acc: 0.9822 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/36
+Eval begin...
+step 10/10 - loss: 1.8107 - acc: 0.7232 - 237ms/step
+Eval samples: 625
+Epoch 38/50
+step 69/69 - loss: 0.0520 - acc: 0.9851 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/37
+Eval begin...
+step 10/10 - loss: 1.1043 - acc: 0.7456 - 238ms/step
+Eval samples: 625
+Epoch 39/50
+step 69/69 - loss: 0.1121 - acc: 0.9888 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/38
+Eval begin...
+step 10/10 - loss: 1.4829 - acc: 0.7504 - 237ms/step
+Eval samples: 625
+Epoch 40/50
+step 69/69 - loss: 0.0743 - acc: 0.9915 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/39
+Eval begin...
+step 10/10 - loss: 0.5398 - acc: 0.8160 - 237ms/step
+Eval samples: 625
+Epoch 41/50
+step 69/69 - loss: 0.0667 - acc: 0.9925 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/40
+Eval begin...
+step 10/10 - loss: 1.1551 - acc: 0.7920 - 236ms/step
+Eval samples: 625
+Epoch 42/50
+step 69/69 - loss: 0.2522 - acc: 0.9881 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/41
+Eval begin...
+step 10/10 - loss: 1.2058 - acc: 0.8080 - 236ms/step
+Eval samples: 625
+Epoch 43/50
+step 69/69 - loss: 0.1210 - acc: 0.9710 - 444ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/42
+Eval begin...
+step 10/10 - loss: 1.2328 - acc: 0.7568 - 237ms/step
+Eval samples: 625
+Epoch 44/50
+step 69/69 - loss: 0.0072 - acc: 0.9847 - 445ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/43
+Eval begin...
+step 10/10 - loss: 1.3900 - acc: 0.7600 - 236ms/step
+Eval samples: 625
+Epoch 45/50
+step 69/69 - loss: 0.0049 - acc: 0.9890 - 445ms/step
+save checkpoint at /home/roots/ruiqingluo/model/net3resnet101_pretrained/44
+Eval begin...
+step 10/10 - loss: 1.2499 - acc: 0.7808 - 236ms/step

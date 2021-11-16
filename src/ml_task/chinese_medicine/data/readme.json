@@ -1,0 +1,36 @@
+{
+    "all_class_images": 902,
+    "all_class_name": "./data/Chinese Medicine/",
+    "class_detail": [
+        {
+            "class_eval_images": 27,
+            "class_label": 0,
+            "class_name": "gouqi",
+            "class_trainer_images": 158
+        },
+        {
+            "class_eval_images": 26,
+            "class_label": 1,
+            "class_name": "jinyinhua",
+            "class_trainer_images": 154
+        },
+        {
+            "class_eval_images": 24,
+            "class_label": 2,
+            "class_name": "huaihua",
+            "class_trainer_images": 143
+        },
+        {
+            "class_eval_images": 28,
+            "class_label": 3,
+            "class_name": "dangshen",
+            "class_trainer_images": 162
+        },
+        {
+            "class_eval_images": 26,
+            "class_label": 4,
+            "class_name": "baihe",
+            "class_trainer_images": 154
+        }
+    ]
+}
