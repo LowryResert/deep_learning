@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6dc3a1b8-13ea-4ddb-8962-85fd43b14636" name="Changes" comment="# delete file that too large to push">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6dc3a1b8-13ea-4ddb-8962-85fd43b14636" name="Changes" comment="# update dataset default data path">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/qt/module/component.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/qt/module/component.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/qt/module/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/qt/module/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/qt/test_alphanet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/qt/test_alphanet.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +57,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -73,7 +77,7 @@
       <recent name="$PROJECT_DIR$/src/quantitative_trading的副本/data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_alphanet (1)">
+  <component name="RunManager" selected="Python.test_alphanet">
     <configuration name="FashionMNIST" type="PythonConfigurationType" factoryName="Python">
       <module name="deep_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -426,29 +430,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_alphanet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="deep_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/qt" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/qt/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_alphanet (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="deep_learning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/qt" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -525,16 +513,14 @@
       <item itemvalue="Python.Foods_torch" />
       <item itemvalue="Python.edward" />
       <item itemvalue="Python.component" />
-      <item itemvalue="Python.test (1)" />
       <item itemvalue="Python.dataset" />
-      <item itemvalue="Python.test_alphanet (1)" />
+      <item itemvalue="Python.test_alphanet" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_alphanet (1)" />
-        <item itemvalue="Python.dataset" />
-        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.test_alphanet" />
         <item itemvalue="Python.component" />
+        <item itemvalue="Python.dataset" />
         <item itemvalue="Python.edward" />
       </list>
     </recent_temporary>
@@ -592,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637029236591</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="# update dataset default data path">
+      <created>1637033623647</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637033623647</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,11 +609,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/ml_task/sentiment/output" />
     </ignored-roots>
     <MESSAGE value="# delete file that too large to push" />
-    <option name="LAST_COMMIT_MESSAGE" value="# delete file that too large to push" />
+    <MESSAGE value="# update dataset default data path" />
+    <option name="LAST_COMMIT_MESSAGE" value="# update dataset default data path" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -632,8 +627,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/qt/test_alphanet.py</url>
-          <line>61</line>
-          <option name="timeStamp" value="6" />
+          <line>64</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -647,7 +642,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/deep_learning$Foods.coverage" NAME="Foods Coverage Results" MODIFIED="1634117651524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ml_task/Foods" />
-    <SUITE FILE_PATH="coverage/deep_learning$test_alphanet.coverage" NAME="test_alphanet Coverage Results" MODIFIED="1635917208932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/quantitative_trading" />
+    <SUITE FILE_PATH="coverage/deep_learning$test_alphanet.coverage" NAME="test_alphanet Coverage Results" MODIFIED="1637042192681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/qt" />
     <SUITE FILE_PATH="coverage/deep_learning$1.coverage" NAME="1 Coverage Results" MODIFIED="1632459692872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dl" />
     <SUITE FILE_PATH="coverage/deep_learning$test__2_.coverage" NAME="test (2) Coverage Results" MODIFIED="1635477999798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ml_task/chinese_medicine" />
     <SUITE FILE_PATH="coverage/deep_learning$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1636635604577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/qt" />
@@ -663,7 +658,7 @@
     <SUITE FILE_PATH="coverage/deep_learning$read_data.coverage" NAME="read_data Coverage Results" MODIFIED="1635910699976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/quantitative_trading" />
     <SUITE FILE_PATH="coverage/deep_learning$dataset.coverage" NAME="dataset Coverage Results" MODIFIED="1636981509060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/qt/module" />
     <SUITE FILE_PATH="coverage/deep_learning$foods_self_defined_resnet34.coverage" NAME="foods_self_defined_resnet34 Coverage Results" MODIFIED="1634455359557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ml_task/Foods" />
-    <SUITE FILE_PATH="coverage/deep_learning$test_alphanet__1_.coverage" NAME="test_alphanet (1) Coverage Results" MODIFIED="1637028655328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/qt" />
+    <SUITE FILE_PATH="coverage/deep_learning$test_alphanet__1_.coverage" NAME="test_alphanet (1) Coverage Results" MODIFIED="1637033777877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/qt" />
     <SUITE FILE_PATH="coverage/deep_learning$augmentation.coverage" NAME="augmentation Coverage Results" MODIFIED="1635505043057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ml_task/chinese_medicine" />
   </component>
 </project>
