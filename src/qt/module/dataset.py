@@ -30,7 +30,7 @@ class Securities(Dataset):
         valid_data = []
         for sub_data in org_data:
             sub_data.sort_values(by='日期', inplace=True)
-            sub_data = sub_data.iloc[:, 2: 18].to_numpy(dtype='float64')  # (23400, 16)
+            sub_data = sub_data.iloc[:, 2: 18].to_numpy(dtype='float32')  # (23400, 16)
             nums, self.height = sub_data.shape
             # Labels 预测目标为5天后的涨跌幅
             sub_labels = sub_data[:, 5]

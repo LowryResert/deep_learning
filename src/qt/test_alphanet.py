@@ -59,8 +59,8 @@ def train(train_loader, eval_loader):
         model.train()
         for batch_id, data in enumerate(train_loader):
             img_data, labels = data
-            img_data = img_data.to(torch.float32)  # tensor 需要是double类型
-            labels = labels.to(torch.float32)  # labels 需要是double类型
+            # img_data = img_data.to(torch.float32)  # tensor 需要是double类型
+            # labels = labels.to(torch.float32)  # labels 需要是double类型
             pred = model(img_data)
             training_loss = loss_fn(pred, labels)
             # if torch.isnan(training_loss):

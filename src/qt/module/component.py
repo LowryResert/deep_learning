@@ -1,5 +1,8 @@
 import torch
 import torch.nn as nn
+# import pandas as pd
+# from dataset import Securities
+# from torch.utils.data import DataLoader
 
 
 def generate_steps(width: int, stride: int) -> list:
@@ -191,6 +194,15 @@ class Pooling(nn.Module):
         return torch.cat(pooling_res, dim=3)
 
 
-model = Corr(9, 30, 10)
-# t = torch.randint(10, 100, (16, 1, 9, 30)).float()
-# pred = model(t)
+# securities = Securities()
+# loader = DataLoader(data, batch_size=5)
+# path = '../data/test_data.zip'
+# df = pd.read_csv(path, dtype={"代码": "category"})
+# df = df[df['日期'] >= 20110131]
+# df = df[df['日期'] <= 20200529]
+# codes = list(df.groupby('代码').groups.keys())
+# df1 = df[df['代码'] == codes[0]]
+# df = pd.read_csv('../img_data_nan.txt', header=None, sep=' ')
+# x = df.to_numpy(dtype='float32')
+# x = x.reshape((1, 1, 16, 30))
+# x = torch.from_numpy(x)
