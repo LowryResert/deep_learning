@@ -31,17 +31,17 @@ class AlphaNet(nn.Module):
     def forward(self, x):
         # Feature Extraction Layer
         # [64 * 1 * 36 * 3], [64 * 1 * 120 * 3]
-        ts_cov10 = self.bn(self.ts_cov10(x))
-        ts_corr10 = self.bn(self.ts_corr10(x))
+        cov10 = self.bn(self.ts_cov10(x))
+        corr10 = self.bn(self.ts_corr10(x))
         # [64 * 1 * 9 * 3]
-        ts_stddev10 = self.bn(self.ts_stddev10(x))
-        ts_zscore10 = self.bn(self.ts_zscore10(x))
-        ts_return10 = self.bn(self.ts_return10(x))
-        ts_decaylinear10 = self.bn(self.ts_decaylinear10(x))
+        stddev10 = self.bn(self.ts_stddev10(x))
+        zscore10 = self.bn(self.ts_zscore10(x))
+        return10 = self.bn(self.ts_return10(x))
+        decaylinear10 = self.bn(self.ts_decaylinear10(x))
 
         # Pooling Layer
         # Concatenate all Features that calculated from different Components
-        features = [ts_cov10, ts_corr10, ts_stddev10, ts_zscore10, ts_return10, ts_decaylinear10]
+        features = [cov10, corr10, stddev10, zscore10, return10, decaylinear10]
         # [64 * 1 * (36*2+4*9) * 3] = [64 * 324]
         x = torch.cat(features, dim=2)  # [64 * 1 * (120*2+4*9) * 3] = [64 * 828]
         # [64 * 1 * (3 * (36*2+4*9)) * 1] = [64 * 324]]
