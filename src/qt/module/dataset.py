@@ -18,7 +18,7 @@ class Securities(Dataset):
     """
     data: (23400, 16)
     """
-    def __init__(self, path, mode='train'):
+    def __init__(self, path='../data/test_data.zip', mode='train'):
         super(Securities, self).__init__()
 
         org_data = extractData(path)
