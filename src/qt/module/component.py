@@ -1,8 +1,5 @@
 import torch
 import torch.nn as nn
-# import pandas as pd
-# from dataset import Securities
-# from torch.utils.data import DataLoader
 
 
 def generate_steps(width: int, stride: int) -> list:
@@ -72,10 +69,10 @@ class Corr(nn.Module):
             y = input[:, :, self.pair_y, start:end]
             x_mean = x.mean(dim=3, keepdims=True)
             y_mean = y.mean(dim=3, keepdims=True)
-            cov = (((x - x_mean) * (y - y_mean)) / (end - start - 1))
+            cov = (((x - x_mean) * (y - y_mean)) / (end - start - 1)).sum(dim=3, keepdims=True)
             x_std = x.std(dim=3, keepdims=True)
             y_std = y.std(dim=3, keepdims=True)
-            std = ((cov / (x_std * y_std)) / (end - start - 1)).sum(dim=3, keepdims=True)
+            std = (cov / (x_std * y_std)).sum(dim=3, keepdims=True)
             stds.append(std)
         return torch.cat(stds, dim=3)
 
@@ -192,17 +189,3 @@ class Pooling(nn.Module):
             y = torch.cat((mean, max, min), dim=2)
             pooling_res.append(y)
         return torch.cat(pooling_res, dim=3)
-
-
-# securities = Securities()
-# loader = DataLoader(data, batch_size=5)
-# path = '../data/test_data.zip'
-# df = pd.read_csv(path, dtype={"代码": "category"})
-# df = df[df['日期'] >= 20110131]
-# df = df[df['日期'] <= 20200529]
-# codes = list(df.groupby('代码').groups.keys())
-# df1 = df[df['代码'] == codes[0]]
-# df = pd.read_csv('../img_data_nan.txt', header=None, sep=' ')
-# x = df.to_numpy(dtype='float32')
-# x = x.reshape((1, 1, 16, 30))
-# x = torch.from_numpy(x)
