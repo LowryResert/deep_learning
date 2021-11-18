@@ -3,24 +3,38 @@ import numpy as np
 from torch.utils.data import Dataset
 
 
+keys = ['code', 'date', 'return', 'open', 'close', 'high', 'low', 'volume', 'vwap', 'turn', 'free_turn', 'label']
+
+
 def extractData(path):
     df = pd.read_csv(path, dtype={"代码": "category"})
     df = df[df['日期'] >= 20110131]
     df = df[df['日期'] <= 20200529]
-    data_list = {'code': df['代码'], 'date': df['日期'], 'return': df['10日回报率'], 'open': df['开盘价(元)'], 'close': df['收盘价(元)'],
-            'high': df['最高价(元)'], 'low': df['最低价(元)'], 'volume': df['成交量(股)'], 'vwap': df['vwap/high'] * df['最高价(元)'],
-            'turn': df['换手率(%)'], 'free_turn': df['换手率(基准.自由流通股本)'], 'label': df['涨跌幅(%)']}
-    data = pd.DataFrame(data_list)
+    list = [df['代码'], df['日期'], df['10日回报率'], df['开盘价(元)'], df['收盘价(元)'],
+            df['最高价(元)'], df['最低价(元)'], df['成交量(股)'], df['vwap/high'] * df['最高价(元)'],
+            df['换手率(%)'], df['换手率(基准.自由流通股本)'], df['涨跌幅(%)']]
+    # data_list = {'code': df['代码'], 'date': df['日期'], 'return': df['10日回报率'], 'open': df['开盘价(元)'],
+    #              'close': df['收盘价(元)'], 'high': df['最高价(元)'], 'low': df['最低价(元)'], 'volume': df['成交量(股)'],
+    #              'vwap': df['vwap/high'] * df['最高价(元)'], 'turn': df['换手率(%)'],
+    #              'free_turn': df['换手率(基准.自由流通股本)'], 'label': df['涨跌幅(%)']}
+    data = np.array(list)
 
+    data_to_norm = data[2:11]
+    data_to_norm = data_to_norm.astype('float32')
     # Normalization By Feature
-    mean = data.mean(axis=0)
-    std = data.std(axis=0)
-    norm_data = (data - mean) / std
+    mean = data_to_norm.mean(axis=1, keepdims=True)
+    std = data_to_norm.std(axis=1, keepdims=True)
+    normed_data = (data_to_norm - mean) / std
+    data = np.vstack((data[0:2], normed_data, data[11]))
 
-    codes = norm_data.groupby('code').groups.keys()
+    # Compress as DataFrame
+    data = data.T
+    data = pd.DataFrame(data, columns=keys)
+
+    codes = data.groupby('code').groups.keys()
     data_arr = []
     for code in codes:
-        data_arr.append(norm_data[norm_data['code'] == code])
+        data_arr.append(data[data['code'] == code])
     return data_arr
 
 
@@ -45,6 +59,7 @@ class Securities(Dataset):
             # Labels 预测目标为10天后的涨跌幅
             sub_labels = sub_data.iloc[:, 11].to_numpy(dtype='float32')
             for i in range(self.width + 9, nums):
+                # for i in range(self.width + 9, 100):
                 start = i - self.width - 9
                 end = i - 9
                 if i % 2 is not 0:

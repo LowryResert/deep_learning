@@ -2,7 +2,7 @@ import torch.nn
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
 from alphanet import AlphaNet
-from qt.module.dataset import Securities
+from module.dataset import Securities
 import os
 import time
 import numpy as np
@@ -42,8 +42,8 @@ def evaluate(model, eval_loader, loss_fn):
         img_data, labels = data
         pred = model(img_data)
         valid_loss = loss_fn(pred, labels)
-        print("[evaluate] expected: {}, prediction: {}".format(labels, pred))
-        loss_set.append(valid_loss)
+        # print("[evaluate] expected: {}, prediction: {}".format(labels, pred))
+        loss_set.append(valid_loss.item())
 
     eval_loss = np.array(loss_set).mean()
     return eval_loss
