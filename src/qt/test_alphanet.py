@@ -8,7 +8,7 @@ import time
 import numpy as np
 
 batch_size = 100
-num_epochs = 50
+num_epochs = 1000
 lr = 0.0001
 
 path = './data/test_data.zip'
