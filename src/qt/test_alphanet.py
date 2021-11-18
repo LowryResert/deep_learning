@@ -8,7 +8,7 @@ import time
 import numpy as np
 
 batch_size = 100
-num_epochs = 1
+num_epochs = 50
 lr = 0.0001
 
 path = './data/test_data.zip'
@@ -68,13 +68,13 @@ def train(train_loader, eval_loader):
             print("[training] epoch: {}, step: {}, loss: {}".format(
                 epoch_id,
                 batch_id + 1,
-                training_loss.detach().numpy().item()
+                training_loss.item()
             ))
 
             # 每个batch记录训练集的loss和acc
             train_iter_id += 1
             train_iters.append(train_iter_id)
-            train_loss.append(training_loss.detach().numpy().item())
+            train_loss.append(training_loss.item())
 
             # 反向传播
             training_loss.backward()

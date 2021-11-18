@@ -52,6 +52,8 @@ class Securities(Dataset):
         training_data = []
         valid_labels = []
         valid_data = []
+
+        count = 0
         for sub_data in org_data:
             sub_data.sort_values(by='date', inplace=True)
             feats_data = sub_data.iloc[:, 2: 11].to_numpy(dtype='float32')  # (23400, 9)
@@ -62,12 +64,13 @@ class Securities(Dataset):
                 # for i in range(self.width + 9, 100):
                 start = i - self.width - 9
                 end = i - 9
-                if i % 2 is not 0:
+                if count % 3 is not 2:
                     training_labels.append(sub_labels[i])
                     training_data.append(feats_data[start: end])
                 else:
                     valid_labels.append(sub_labels[i])
                     valid_data.append(feats_data[start: end])
+                count += 1
 
         if mode == 'train':
             self.labels = training_labels
