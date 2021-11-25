@@ -118,7 +118,7 @@ class ZScore(nn.Module):
             sub_x = x[:, :, :, start:end]
             std_sub_x = sub_x.std(dim=3, keepdims=True)
             mean_sub_x = sub_x.mean(dim=3, keepdims=True)
-            zscore_sub_x = mean_sub_x / std_sub_x
+            zscore_sub_x = ((sub_x - mean_sub_x) / (std_sub_x * (end - start - 1))).sum(dim=3, keepdims=True)
             zscores.append(zscore_sub_x)
         return torch.cat(zscores, dim=3)
 
