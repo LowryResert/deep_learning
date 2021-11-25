@@ -1,5 +1,5 @@
 *.zip
-./data/
+src/ml_task/FashionMNIST/data/
 .vscode
 .ipynb_checkpoints
 .idea
